@@ -4,7 +4,7 @@ export default function FeaturedProject() {
   return (
     <section className="py-32 bg-primary px-6" id="projects-spotlight">
       <div className="max-w-7xl mx-auto">
-        <div className="bg-secondary border border-white/5 rounded-[2rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
+        <div className="bg-secondary border border-white/5 rounded-4xl overflow-hidden flex flex-col lg:flex-row shadow-2xl">
 
           {/* Image */}
           <div className="lg:w-3/5 p-4 lg:p-8">
@@ -33,7 +33,7 @@ export default function FeaturedProject() {
                 </span>
               ))}
             </div>
-            <a href="#" className="inline-flex items-center gap-3 bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-xl font-bold transition-all w-fit">
+            <a href="https://roamradar.netlify.app/" className="inline-flex items-center gap-3 bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-xl font-bold transition-all w-fit">
               Explore Case Study
               <span className="material-symbols-outlined">arrow_forward</span>
             </a>
