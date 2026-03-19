@@ -1,35 +1,35 @@
+import roamRadarImg from '../assets/Roamradar.png'
 import jobImg from '../assets/job.png'
-import payoImg from '../assets/payo.png'
 import issueImg from '../assets/issue.png'
 import AnimatedSection from './AnimatedSection'
 
 const projects = [
   {
+    title: 'RoamRadar',
+    tag: 'JavaScript',
+    description: 'A responsive travel dashboard to explore destinations, check weather, discover attractions, save favorites, and plan trips with AI assistance.',
+    highlight: 'Dynamic weather updates, interactive Leaflet maps, dark/light mode, and full mobile responsiveness, built with Tailwind CSS, DaisyUI, Font Awesome, and core JavaScript concepts.',
+    image: roamRadarImg,
+    link: 'https://roamradar.netlify.app/',
+    github: 'https://github.com/nilanjanajui/RoamRadar-Travel-Guide',
+  },
+  {
     title: 'Job Tracker',
-    tag: 'js',
+    tag: 'JavaScript',
     description: 'A serverless job application tracker that helps users manage their job search with ease.',
-    highlight: 'This project demonstrates dynamic UI rendering, state management, filtering logic, and responsive design using Vanilla JavaScript.',
+    highlight: 'This project demonstrates dynamic UI rendering, state management, filtering logic, and responsive design using Vanilla JavaScript and ES6 features.',
     image: jobImg,
     link: 'https://job-application-tracker1443.netlify.app/',
     github: 'https://github.com/nilanjanajui/Job-Application-Tracker',
   },
   {
     title: 'Issues Tracker',
-    tag: 'js',
+    tag: 'JavaScript',
     description: 'A GitHub Issues Tracker that allows users to view, create, and manage issues for any public GitHub repository.',
-    highlight: 'This project demonstrates API integration, dynamic UI updates, and state management using Vanilla JavaScript.',
+    highlight: 'This project demonstrates API integration, dynamic UI updates, and state management using Vanilla JavaScript, DOM manipulation, and ES6 features.',
     image: issueImg,
     link: 'https://github-issues-tracker-ph-a5.netlify.app/',
     github: 'https://github.com/nilanjanajui/GitHub-Issues-Tracker',
-  },
-  {
-    title: 'Payoo',
-    tag: 'js',
-    description: 'A mobile banking interface that simulates core banking functionalities with a clean and intuitive design.',
-    highlight: 'The project focuses on core frontend fundamentals such as state management, input validation, DOM manipulation, and clean file separation.',
-    image: payoImg,
-    link: 'https://nilanjanajui.github.io/Payo-Mobile-Banking/',
-    github: 'https://github.com/nilanjanajui/Payo-Mobile-Banking',
   },
 ]
 
