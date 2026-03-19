@@ -22,12 +22,10 @@ export default function FeaturedProject() {
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-light-bg mb-4 sm:mb-6">RoamRadar</h2>
             <p className="text-text-dim text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
-              A travel planning app featuring dynamic interactive maps for seamless itinerary
-              organization. Real-time data synchronization with Leaflet integration ensures users
-              stay updated across all devices.
+              RoamRadar is a responsive travel dashboard designed to help users explore destinations, check current weather, discover attractions, save favorites, and plan trips with AI assistance. It supports dark/light mode toggling, dynamic weather updates, and interactive maps powered by Leaflet. The app is built using Tailwind CSS, DaisyUI, Font Awesome, DOM manipulation, JavaScript core concepts, ES6, API fetching, and is fully mobile responsive.
             </p>
             <div className="flex flex-wrap gap-2 sm:gap-3 mb-7 sm:mb-10">
-              {['React', 'Node.js', 'Leaflet'].map((tech) => (
+              {['JavaScript(ES6)', 'Leaflet', 'APIs'].map((tech) => (
                 <span key={tech} className="px-3 sm:px-4 py-1 sm:py-1.5 bg-white/5 rounded-full text-xs font-bold text-light-bg border border-white/10">
                   {tech}
                 </span>

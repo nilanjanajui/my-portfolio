@@ -11,7 +11,7 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-center">
 
           <div className="animate-fade-up">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-10 text-light-bg">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-10 sm:mb-10 text-light-bg">
               Passionate about <br />
               <span className="text-white bg-accent px-3 rounded-lg">problem solving</span>
             </h2>
@@ -23,12 +23,12 @@ export default function About() {
             </p>
             <p className="text-base sm:text-lg leading-relaxed text-text-dim font-medium mb-6 sm:mb-8">
               I built a <span className="text-light-bg font-bold">Flask-based ETL web app</span> that
-              automates database workflows — handling CSV, Excel, JSON, XML, cleaning data, detecting
+              automates database workflows - handling CSV, Excel, JSON, XML, cleaning data, detecting
               functional dependencies, computing candidate keys, and normalizing to 3NF with a
               drag-and-drop React interface.
             </p>
             <p className="text-base sm:text-lg leading-relaxed text-text-dim font-medium mb-8 sm:mb-12">
-              Photography shapes my UI/UX philosophy — every interface should guide users through
+              Photography shapes my UI/UX philosophy - every interface should guide users through
               visual hierarchy, clarity, and intentional spacing, so they feel guided, not overwhelmed.
             </p>
 

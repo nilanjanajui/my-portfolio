@@ -74,7 +74,7 @@ export default function Skills() {
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4 text-light-bg">Technical Toolkit</h2>
           <div className="h-1.5 w-24 bg-accent rounded-full mb-6 sm:mb-8"></div>
           <p className="text-text-dim max-w-2xl text-base sm:text-lg px-2">
-            A full-spectrum skill set — from pixel-perfect interfaces to normalized databases and embedded systems.
+            A full-spectrum skill set - from pixel-perfect interfaces to normalized databases and embedded systems.
           </p>
         </div>
 

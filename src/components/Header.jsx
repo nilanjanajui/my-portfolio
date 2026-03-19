@@ -10,8 +10,8 @@ export default function Header() {
 
           {/* Logo */}
           <div className="flex items-center gap-2 md:gap-3">
-            <span className="material-symbols-outlined text-accent text-2xl md:text-3xl">terminal</span>
-            <span className="text-lg md:text-xl font-bold tracking-tight text-light-bg">DevPortfolio</span>
+            <span className=" material-symbols-outlined text-accent text-2xl md:text-3xl">terminal</span>
+            <span className="text-lg md:text-xl font-bold tracking-tight text-light-bg ">Portfolio</span>
           </div>
 
           {/* Desktop Nav */}

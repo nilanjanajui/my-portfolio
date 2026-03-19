@@ -41,7 +41,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-base sm:text-lg lg:text-xl text-text-dim max-w-xl mx-auto lg:mx-0">
-            I design and develop responsive, user-friendly web applications — combining frontend finesse,
+            I design and develop responsive, user-friendly web applications - combining frontend finesse,
             backend structure, and database expertise to build systems that last.
           </p>
 

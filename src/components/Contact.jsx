@@ -11,7 +11,7 @@ export default function Contact() {
           </h2>
 
           <p className="text-base sm:text-xl text-text-dim mb-10 sm:mb-16 max-w-2xl font-medium px-2">
-            "I don't just build interfaces — I build applications that solve problems and work reliably."
+            "I don't just build interfaces - I build applications that solve problems and work reliably."
           </p>
 
           {/* Email Input */}
@@ -49,7 +49,7 @@ export default function Contact() {
           {/* Footer */}
           <div className="h-px w-full max-w-5xl bg-white/5 mb-8 sm:mb-12"></div>
           <div className="flex flex-col md:flex-row justify-between w-full max-w-5xl text-text-dim font-medium text-xs sm:text-sm gap-3 sm:gap-6 text-center md:text-left">
-            <p>© 2024 Nilanjana. Built with clean design and solid logic.</p>
+            <p>© 2026 Nilanjana Das Jui. All rights reserved.</p>
             <div className="flex justify-center md:justify-end gap-6 sm:gap-10">
               <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-accent transition-colors">Open Source</a>

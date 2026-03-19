@@ -1,13 +1,26 @@
 @import "tailwindcss";
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #37353E;
+@theme {
+  --color-primary:      #37353E;
+  --color-secondary:    #44444E;
+  --color-accent:       #715A5A;
+  --color-accent-hover: #5F4B4B;
+  --color-light-bg:     #D3DAD9;
+  --color-text-dim:     #A0A8A7;
+
+  --font-sans:    Inter, sans-serif;
+  --font-display: Poppins, sans-serif;
+
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg:      0.5rem;
+  --radius-xl:      1rem;
+  --radius-2xl:     1rem;
+  --radius-3xl:     1.5rem;
+  --radius-full:    9999px;
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Poppins', sans-serif;
-}
+body { font-family: 'Inter', sans-serif; }
+h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
 
 .hero-gradient {
   background: linear-gradient(rgba(55, 53, 62, 0.85), rgba(55, 53, 62, 0.98)),
@@ -20,7 +33,4 @@ h1, h2, h3, h4 {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
-.animate-fade-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
+.animate-fade-up { animation: fadeInUp 0.8s ease-out forwards; }
