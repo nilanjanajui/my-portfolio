@@ -1,8 +1,10 @@
 import roamRadar from '../assets/Roamradar.png'
+import AnimatedSection from './AnimatedSection'
 
 export default function FeaturedProject() {
   return (
     <section className="py-16 sm:py-24 lg:py-32 bg-primary px-4 sm:px-6" id="projects-spotlight">
+      <AnimatedSection direction="up" delay={100}>
       <div className="max-w-7xl mx-auto">
         <div className="bg-secondary border border-white/5 rounded-2xl lg:rounded-4xl overflow-hidden flex flex-col lg:flex-row shadow-2xl">
 
@@ -55,6 +57,7 @@ export default function FeaturedProject() {
 
         </div>
       </div>
+      </AnimatedSection>
     </section>
   )
 }

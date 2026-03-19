@@ -1,11 +1,13 @@
 import profileImg from '../assets/profile.jpg'
+import AnimatedSection from './AnimatedSection'
 
 export default function Hero() {
   return (
     <section className="relative py-16 sm:py-24 lg:py-40 px-4 sm:px-6 hero-gradient overflow-hidden" id="home">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-        {/* Profile Image */}
+          {/* Profile Image */}
+        <AnimatedSection direction="left" delay={100}>
         <div className="relative flex justify-center lg:justify-start order-2 lg:order-1 animate-fade-up">
           <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-112.5 lg:h-112.5">
             <div className="absolute -inset-4 bg-accent/20 blur-3xl rounded-full"></div>
@@ -25,8 +27,10 @@ export default function Hero() {
             </div>
           </div>
         </div>
+        </AnimatedSection>
 
         {/* Text Content */}
+        <AnimatedSection direction="right" delay={200}>
         <div className="flex flex-col gap-6 sm:gap-8 lg:gap-10 order-1 lg:order-2 animate-fade-up text-center lg:text-left" style={{ animationDelay: '0.2s' }}>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/20 border border-accent/30 text-light-bg text-xs font-bold uppercase tracking-widest w-fit mx-auto lg:mx-0">
             <span className="relative flex h-2 w-2">
@@ -57,6 +61,7 @@ export default function Hero() {
             </a>
           </div>
         </div>
+        </AnimatedSection>
 
       </div>
     </section>

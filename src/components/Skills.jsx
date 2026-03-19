@@ -1,3 +1,5 @@
+import AnimatedSection from './AnimatedSection'
+
 const skills = [
   {
     icon: 'code_blocks',
@@ -70,6 +72,7 @@ export default function Skills() {
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
+        <AnimatedSection direction="up">
         <div className="flex flex-col items-center mb-12 sm:mb-16 lg:mb-24 text-center">
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4 text-light-bg">Technical Toolkit</h2>
           <div className="h-1.5 w-24 bg-accent rounded-full mb-6 sm:mb-8"></div>
@@ -77,10 +80,12 @@ export default function Skills() {
             A full-spectrum skill set - from pixel-perfect interfaces to normalized databases and embedded systems.
           </p>
         </div>
+        </AnimatedSection>
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
-          {skills.map((skill) => (
+          {skills.map((skill, index) => (
+            <AnimatedSection key={skill.title} direction="up" delay={index * 100}>
             <div
               key={skill.title}
               className="bg-secondary p-6 sm:p-8 lg:p-10 rounded-xl border border-white/5 shadow-sm hover:shadow-xl transition-all group"
@@ -117,6 +122,7 @@ export default function Skills() {
               </div>
 
             </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>

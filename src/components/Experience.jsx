@@ -1,3 +1,5 @@
+import AnimatedSection from './AnimatedSection'
+
 const experiences = [
   {
     period: "Ongoing",
@@ -53,7 +55,9 @@ export default function Experience() {
         </div>
 
         <div className="relative border-l-2 border-white/10 pl-6 sm:pl-10 ml-2 sm:ml-4 space-y-12 sm:space-y-16">
-          {experiences.map((exp) => (
+        
+          {experiences.map((exp, index) => (
+            <AnimatedSection key={exp.role} direction="up" delay={index * 150}>
             <div key={exp.role} className="relative">
               <div className="absolute -left-8.75 sm:-left-12.75 top-0 w-5 h-5 sm:w-6 sm:h-6 rounded-xl bg-accent border-4 border-primary"></div>
               <div className="flex flex-col gap-2 sm:gap-3">
@@ -81,6 +85,7 @@ export default function Experience() {
                 </ul>
               </div>
             </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>

@@ -1,6 +1,9 @@
+import AnimatedSection from './AnimatedSection'
+
 export default function Contact() {
   return (
     <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6" id="contact">
+      <AnimatedSection direction="up" delay={150}>
       <div className="max-w-7xl mx-auto">
         <div className="bg-secondary border border-white/5 rounded-2xl sm:rounded-3xl lg:rounded-[3rem] p-6 sm:p-10 lg:p-24 flex flex-col items-center text-center shadow-2xl">
 
@@ -27,12 +30,14 @@ export default function Contact() {
           </div>
 
           {/* Social Links */}
+          
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 lg:gap-8 mb-12 sm:mb-20 w-full sm:w-auto">
             {[
               { icon: 'mail',     label: 'Email', href: 'mailto:nilanjana.csecu@gmail.com' },
               { icon: 'share',    label: 'LinkedIn',                  href: 'https://www.linkedin.com/in/nilanjana-jui-759402286/' },
               { icon: 'terminal', label: 'GitHub',                    href: 'https://github.com/nilanjanajui' },
-            ].map((link) => (
+            ].map((link, index) => (
+              <AnimatedSection direction="up" delay={index * 150}>
               <a
                 key={link.label}
                 href={link.href}
@@ -43,6 +48,7 @@ export default function Contact() {
                 <span className="material-symbols-outlined text-accent group-hover:scale-110 transition-transform text-base sm:text-xl">{link.icon}</span>
                 <span className="font-bold">{link.label}</span>
               </a>
+              </AnimatedSection>
             ))}
           </div>
 
@@ -58,6 +64,7 @@ export default function Contact() {
 
         </div>
       </div>
+      </AnimatedSection>
     </section>
   )
 }

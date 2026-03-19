@@ -1,3 +1,5 @@
+import AnimatedSection from './AnimatedSection'
+
 const steps = [
   { number: 1, title: 'Understand', desc: 'Identifying user needs and technical constraints first.' },
   { number: 2, title: 'Build',      desc: 'Translating logic into scalable and maintainable codebases.' },
@@ -18,7 +20,8 @@ export default function HowIBuild() {
           {/* Connector line — desktop only */}
           <div className="hidden md:block absolute top-10 left-0 right-0 h-0.5 bg-white/5 z-0"></div>
 
-          {steps.map((step) => (
+          {steps.map((step, index) => (
+            <AnimatedSection key={step.number} direction="up" delay={index * 150}>
             <div key={step.number} className="relative z-10 flex flex-col items-center text-center group">
               <div className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-xl bg-accent text-white flex items-center justify-center text-2xl sm:text-3xl font-black mb-4 sm:mb-6 shadow-xl transform group-hover:scale-110 transition-transform">
                 {step.number}
@@ -26,6 +29,7 @@ export default function HowIBuild() {
               <h4 className="text-base sm:text-lg lg:text-xl font-bold text-light-bg mb-2 sm:mb-3">{step.title}</h4>
               <p className="text-text-dim text-xs sm:text-sm leading-relaxed">{step.desc}</p>
             </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>

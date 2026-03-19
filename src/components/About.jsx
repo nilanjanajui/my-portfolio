@@ -1,3 +1,5 @@
+import AnimatedSection from './AnimatedSection'
+
 const stats = [
   { value: '5+',   label: 'Projects' },
   { value: '500+',  label: 'Commits'   },
@@ -9,7 +11,7 @@ export default function About() {
     <section className="py-16 sm:py-24 lg:py-32 bg-secondary px-4 sm:px-6" id="about">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-center">
-
+          <AnimatedSection direction="left">
           <div className="animate-fade-up">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-10 sm:mb-10 text-light-bg">
               Passionate about <br />
@@ -41,8 +43,10 @@ export default function About() {
               ))}
             </div>
           </div>
+          </AnimatedSection>
 
           {/* Blob — hidden on mobile */}
+          <AnimatedSection direction="right" delay={300}>
           <div className="relative hidden lg:flex justify-center items-center">
             <div className="absolute w-96 h-96 bg-accent/20 blur-[80px] rounded-full"></div>
             <svg className="relative z-10 w-96 h-96 text-accent opacity-40" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -53,6 +57,7 @@ export default function About() {
               />
             </svg>
           </div>
+          </AnimatedSection>
 
         </div>
       </div>
