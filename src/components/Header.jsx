@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Education from './Education'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
