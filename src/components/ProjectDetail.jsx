@@ -1,0 +1,119 @@
+import { useParams, useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import { projects, featuredProject } from '../data/projects'
+
+export default function ProjectDetail() {
+    const { id } = useParams()
+    const navigate = useNavigate()
+
+    const allProjects = [...projects, featuredProject]
+    const project = allProjects.find(p => p.id === id)
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+    if (!project) {
+        return (
+            <div className="min-h-screen flex flex-col items-center justify-center gap-6">
+                <p className="text-text-dim text-xl">Project not found.</p>
+                <button onClick={() => navigate('/')} className="bg-accent text-white px-6 py-3 rounded-xl font-bold">
+                    Go Home
+                </button>
+            </div>
+        )
+    }
+
+    return (
+        <main className="min-h-screen px-4 sm:px-6 py-16 sm:py-24">
+            <div className="max-w-4xl mx-auto">
+
+                {/* Back Button */}
+                <button
+                    onClick={() => navigate('/')}
+                    className="flex items-center gap-2 text-text-dim hover:text-accent transition-colors mb-12 group"
+                >
+                    <span className="material-symbols-outlined group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                    <span className="font-bold text-sm">Back to Portfolio</span>
+                </button>
+
+                {/* Header */}
+                <div className="mb-10">
+                    <span className="text-accent font-bold uppercase tracking-widest text-xs sm:text-sm mb-3 block">
+                        {project.tag}
+                    </span>
+                    <h1 className="text-4xl sm:text-5xl font-black text-light-bg mb-6">{project.title}</h1>
+                    <p className="text-text-dim text-lg leading-relaxed">{project.description}</p>
+                </div>
+
+                {/* Project Image */}
+                {project.image && (
+                    <div className="rounded-2xl overflow-hidden mb-12 border border-white/5">
+                        <img src={project.image} alt={project.title} className="w-full object-cover" />
+                    </div>
+                )}
+
+                {/* Action Links */}
+                <div className="flex flex-wrap gap-4 mb-14">
+                    <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white px-6 py-3 rounded-xl font-bold transition-all">
+                        <span className="material-symbols-outlined text-base">open_in_new</span>
+                        Live Demo
+                    </a>
+
+                    <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-light-bg px-6 py-3 rounded-xl font-bold transition-all"
+                    >
+                        <span className="material-symbols-outlined text-base">code</span>
+                        GitHub Repo
+                    </a>
+                </div>
+
+                {/* Tech Stack */}
+                <section className="mb-14">
+                    <h2 className="text-2xl font-black text-light-bg mb-6">Tech Stack</h2>
+                    <div className="flex flex-wrap gap-3">
+                        {project.techStack.map(tech => (
+                            <span key={tech} className="px-4 py-2 bg-secondary rounded-full text-sm font-bold text-light-bg border border-white/10">
+                                {tech}
+                            </span>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Challenges */}
+                <section className="mb-14">
+                    <h2 className="text-2xl font-black text-light-bg mb-6">Challenges</h2>
+                    <ul className="space-y-4">
+                        {project.challenges.map((c, i) => (
+                            <li key={i} className="flex items-start gap-4 bg-secondary p-5 rounded-xl border border-white/5">
+                                <span className="material-symbols-outlined text-accent mt-0.5 shrink-0">bolt</span>
+                                <p className="text-text-dim leading-relaxed">{c}</p>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+
+                {/* Future Improvements */}
+                <section className="mb-14">
+                    <h2 className="text-2xl font-black text-light-bg mb-6">Future Improvements</h2>
+                    <ul className="space-y-4">
+                        {project.improvements.map((imp, i) => (
+                            <li key={i} className="flex items-start gap-4 bg-secondary p-5 rounded-xl border border-white/5">
+                                <span className="material-symbols-outlined text-accent mt-0.5 shrink-0">rocket_launch</span>
+                                <p className="text-text-dim leading-relaxed">{imp}</p>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+
+            </div >
+        </main >
+    )
+}

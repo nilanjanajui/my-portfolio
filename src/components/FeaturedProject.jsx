@@ -1,8 +1,10 @@
 import { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import AnimatedSection from './AnimatedSection'
 
 export default function FeaturedProject() {
   const videoRef = useRef(null)
+  const navigate = useNavigate()
 
   const handleMouseEnter = () => {
     videoRef.current?.play()
@@ -73,6 +75,13 @@ export default function FeaturedProject() {
                   Live Demo
                   <span className="material-symbols-outlined text-base sm:text-lg">open_in_new</span>
                 </a>
+                <button
+                  onClick={() => navigate('/projects/database-design-studio')}
+                  className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-light-bg px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold transition-all text-sm sm:text-base"
+                >
+                  <span className="material-symbols-outlined text-base sm:text-lg">info</span>
+                  View Details
+                </button>
                 <a
                   href="https://github.com/nilanjanajui/Project--DataBase-Design-Studio"
                   target="_blank"

@@ -29,12 +29,12 @@ export default function Hero() {
 
             {/* ✅ Name under profile pic */}
             <AnimatedSection direction="up" delay={300}>
-            <div className="text-center lg:text-left mt-6">
-              <span className='text-lg sm:text-xl font-bold text-light-bg'>Hi, I'm</span>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-light-bg">
-              <span className="text-accent">Nilanjana</span> Das <span className='text-accent'>Jui</span>
-              </h1>
-            </div>
+              <div className="text-center lg:text-left mt-6">
+                <span className='text-lg sm:text-xl font-bold text-light-bg'>Hi, I'm</span>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-light-bg">
+                  <span className="text-accent">Nilanjana</span> Das <span className='text-accent'>Jui</span>
+                </h1>
+              </div>
             </AnimatedSection>
 
           </div>
@@ -50,7 +50,7 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
               </span>
-              CSE Student · University of Chittagong
+              Frontend Developer · CSE Student
             </div>
 
             {/* H1 — tagline only */}

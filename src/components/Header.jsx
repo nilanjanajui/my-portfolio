@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Education from './Education'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -16,7 +17,7 @@ export default function Header() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-10">
-            {['home', 'projects', 'skills', 'about', 'experience', 'contact'].map((item) => (
+            {['home', 'projects', 'skills', 'about', 'education', 'experience', 'contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item}`}
@@ -29,10 +30,14 @@ export default function Header() {
 
           {/* Resume + Hamburger */}
           <div className="flex items-center gap-3">
-            <button className="bg-accent hover:bg-accent-hover text-white px-4 md:px-6 py-2 md:py-2.5 rounded-xl text-sm font-bold transition-all flex items-center gap-1.5 md:gap-2 transform hover:-translate-y-0.5">
+            <a
+              href="/resume.pdf"
+              download
+              className="bg-accent hover:bg-accent-hover text-white px-4 md:px-6 py-2 md:py-2.5 rounded-xl text-sm font-bold transition-all flex items-center gap-1.5 md:gap-2 transform hover:-translate-y-0.5"
+            >
               <span className="material-symbols-outlined text-sm">download</span>
               <span>Resume</span>
-            </button>
+            </a>
 
             {/* Mobile Hamburger */}
             <button
@@ -51,7 +56,7 @@ export default function Header() {
       {/* Mobile Menu Dropdown */}
       {menuOpen && (
         <div className="md:hidden bg-primary/98 border-t border-white/5 px-4 py-4 flex flex-col gap-4">
-          {['home', 'projects', 'skills', 'about', 'experience', 'contact'].map((item) => (
+          {['home', 'projects', 'skills', 'about', 'education', 'experience', 'contact'].map((item) => (
             <a
               key={item}
               href={`#${item}`}
