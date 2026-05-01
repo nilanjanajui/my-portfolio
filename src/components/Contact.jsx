@@ -2,16 +2,22 @@ import AnimatedSection from './AnimatedSection'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 
+// service_y4873v8
+
+// template_s5s3w5j
+
+// TBJTeFMV8XSoLKY77
+
 export default function Contact() {
   const form = useRef()
 
   const sendEmail = (e) => {
     e.preventDefault()
     emailjs.sendForm(
-      'YOUR_SERVICE_ID',
-      'YOUR_TEMPLATE_ID',
+      'service_y4873v8',
+      'template_s5s3w5j',
       form.current,
-      'YOUR_PUBLIC_KEY'
+      'TBJTeFMV8XSoLKY77'
     ).then(() => {
       alert('Message sent!')
       form.current.reset()
