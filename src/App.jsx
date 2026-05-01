@@ -3,6 +3,7 @@ import Header from "./components/Header"
 import Hero from "./components/Hero"
 import FeaturedProject from "./components/FeaturedProject"
 import ProjectsGrid from "./components/ProjectsGrid"
+import GitHubActivity from './components/GitHubActivity'
 import Skills from "./components/Skills"
 import HowIBuild from "./components/HowIBuild"
 import About from "./components/About"
@@ -21,6 +22,7 @@ export default function App() {
             <Hero />
             <FeaturedProject />
             <ProjectsGrid />
+            <GitHubActivity />
             <Skills />
             <HowIBuild />
             <About />

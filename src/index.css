@@ -19,6 +19,15 @@
   --radius-full:    9999px;
 }
 
+[data-theme="light"] {
+  --color-primary:      #F5F5F0;
+  --color-secondary:    #E8E8E2;
+  --color-accent:       #715A5A;
+  --color-accent-hover: #5F4B4B;
+  --color-light-bg:     #1A1A2E;
+  --color-text-dim:     #4A4A5A;
+}
+
 body { font-family: 'Inter', sans-serif; }
 h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
 

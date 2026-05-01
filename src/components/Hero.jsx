@@ -1,5 +1,6 @@
 import profileImg from '../assets/profile.jpg'
 import AnimatedSection from './AnimatedSection'
+import { TypeAnimation } from 'react-type-animation'
 
 export default function Hero() {
   return (
@@ -55,7 +56,19 @@ export default function Hero() {
 
             {/* H1 — tagline only */}
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-tight tracking-tight text-light-bg">
-              Building full-stack systems with <span className="text-accent">clean UI</span> and solid logic.
+              I build{' '}
+              <TypeAnimation
+                sequence={[
+                  'clean UI.', 2000,
+                  'React apps.', 2000,
+                  'full-stack systems.', 2000,
+                  'real solutions.', 2000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+                className="text-accent"
+              />
             </h1>
 
             <p className="text-base sm:text-lg lg:text-xl text-text-dim max-w-xl mx-auto lg:mx-0">

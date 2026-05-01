@@ -42,9 +42,9 @@ export default function About() {
                 React interface.
               </p>
               <p className="text-base sm:text-lg leading-relaxed text-text-dim font-medium mb-8 sm:mb-12">
-                Photography shapes my UI/UX philosophy - every interface should
-                guide users through visual hierarchy, clarity, and intentional
-                spacing, so they feel guided, not overwhelmed.
+                Outside of coding, I enjoy photography - it taught me to notice light, framing, and detail,
+                which directly shaped how I think about UI design. I also love reading about space, 
+                history, and technology, and occasionally sketch UI ideas on paper before touching the keyboard.
               </p>
 
               <div className="grid grid-cols-3 gap-3 sm:gap-6">
