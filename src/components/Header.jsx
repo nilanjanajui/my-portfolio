@@ -55,15 +55,6 @@ export default function Header() {
           {/* Right side actions */}
           <div className="flex items-center gap-2 shrink-0">
 
-            <button
-              className="md:hidden text-light-bg p-1"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              <span className="material-symbols-outlined text-2xl">
-                {menuOpen ? 'close' : 'menu'}
-              </span>
-            </button>
-
             {/* Resume button — pill style like image */}
             <a
               href="/resume.pdf"
