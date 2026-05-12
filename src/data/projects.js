@@ -1,9 +1,39 @@
+import sunCartImg from '../assets/suncart.png'
 import roamRadarImg from '../assets/Roamradar.png'
 import jobImg from '../assets/job.png'
 import issueImg from '../assets/issue.png'
 import keenKeeperImg from '../assets/keenkeeper.png'
 
 export const projects = [
+    {
+        id: 'suncart',
+        title: 'SunCart',
+        tag: 'Next.js',
+        description: 'A fully responsive summer eCommerce app with product catalogue, search & filtering, Google OAuth, protected routes, and profile management — built with Next.js App Router.',
+        highlight: 'BetterAuth authentication, MongoDB Atlas, protected routes, hero slider, and full mobile responsiveness.',
+        image: sunCartImg,
+        link: 'https://ph-assignment-08-suncart-83dg.vercel.app',
+        github: 'https://github.com/nilanjanajui/ph-assignment-08-suncart',
+        techStack: ['Next.js', 'React 19', 'Tailwind CSS v4', 'HeroUI', 'BetterAuth', 'MongoDB Atlas', 'Animate.css'],
+        features: [
+            'Hero Slider — animated multi-slide banner showcasing summer deals and offers',
+            'Product Catalogue — 20 summer products with search, category filter, and sort by price or rating',
+            'Protected Routes — product detail pages and profile pages are accessible only to authenticated users',
+            'Authentication — email/password sign-up & login plus Google OAuth powered by BetterAuth',
+            'My Profile & Update Profile — view and edit display name and profile photo with live preview',
+            'Toast notifications for login, register, logout, and error feedback',
+        ],
+        challenges: [
+            'Integrating BetterAuth with MongoDB Atlas adapter required careful environment variable validation — a missing MONGODB_URI caused an infinite hot-reload crash loop, fixed with a singleton global._mongoClient pattern.',
+            'Implementing middleware-based route protection in Next.js App Router while keeping server-side rendering intact — removed a sessionChecked gate that was causing blank SSR renders.',
+            'Managing Google OAuth alongside email/password in a single BetterAuth config while keeping the client and server configs cleanly separated.',
+        ],
+        improvements: [
+            'Add a shopping cart and checkout flow with payment gateway integration.',
+            'Add product reviews and ratings submitted by authenticated users.',
+            'Implement wishlist functionality with persistent storage per user account.',
+        ],
+    },
     {
         id: 'roamradar',
         title: 'RoamRadar',
