@@ -32,12 +32,12 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 md:h-20 items-center justify-between gap-4">
+        <div className="flex h-12 md:h-16 items-center justify-between gap-4">
 
           {/* Logo */}
           <div className="flex items-center gap-2 shrink-0">
             <span className="material-symbols-outlined text-accent text-2xl md:text-3xl">terminal</span>
-            <span className="text-lg md:text-xl font-bold tracking-tight text-light-bg">Portfolio</span>
+            <span className="text-lg md:text-xl font-bold tracking-tight text-light-bg">NJ ⌘</span>
           </div>
 
           {/* Desktop Nav — glass pill */}
