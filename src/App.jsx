@@ -15,24 +15,36 @@ import ProjectDetail from "./components/ProjectDetail"
 export default function App() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-primary text-light-bg selection:bg-accent selection:text-white">
-      <Header />
-      <Routes>
-        <Route path="/" element={
-          <main className="grow">
-            <Hero />
-            <FeaturedProject />
-            <ProjectsGrid />
-            <GitHubActivity />
-            <Skills />
-            <HowIBuild />
-            <About />
-            <Education />
-            <Experience />
-            <Contact />
-          </main>
-        } />
-        <Route path="/projects/:id" element={<ProjectDetail />} />
-      </Routes>
+
+      {/* Ambient background orbs — required for glassmorphism blur to have something to render against */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div className="absolute top-[-10%] left-[-5%] w-96 h-96 bg-accent/15 blur-[100px] rounded-full" />
+        <div className="absolute top-[40%] right-[-10%] w-80 h-80 bg-secondary/30 blur-[80px] rounded-full" />
+        <div className="absolute bottom-[10%] left-[20%] w-72 h-72 bg-accent/10 blur-[90px] rounded-full" />
+      </div>
+
+      {/* Main content sits above the orb layer */}
+      <div className="relative z-10 flex flex-col min-h-screen w-full">
+        <Header />
+        <Routes>
+          <Route path="/" element={
+            <main className="grow">
+              <Hero />
+              <FeaturedProject />
+              <ProjectsGrid />
+              <GitHubActivity />
+              <Skills />
+              <HowIBuild />
+              <About />
+              <Education />
+              <Experience />
+              <Contact />
+            </main>
+          } />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
+        </Routes>
+      </div>
+
     </div>
   )
 }

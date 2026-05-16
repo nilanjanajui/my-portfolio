@@ -13,8 +13,11 @@ export default function GitHubActivity() {
                     </div>
                 </AnimatedSection>
 
+                {/* Calendar card */}
                 <AnimatedSection direction="up" delay={150}>
-                    <div className="bg-secondary border border-white/5 rounded-2xl p-6 sm:p-10 overflow-x-auto">
+                    <div className="relative bg-secondary/20 backdrop-blur-md border border-white/8 rounded-2xl p-6 sm:p-10 overflow-x-auto">
+                        {/* Top shine line */}
+                        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent pointer-events-none" />
                         <GitHubCalendar
                             username="nilanjanajui"
                             colorScheme="dark"
@@ -28,7 +31,7 @@ export default function GitHubActivity() {
                     </div>
                 </AnimatedSection>
 
-                {/* Live GitHub Stats Cards */}
+                {/* Stats Cards */}
                 <AnimatedSection direction="up" delay={200}>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-6">
                         {[
@@ -56,9 +59,11 @@ export default function GitHubActivity() {
                                 href={item.href}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="bg-secondary border border-white/5 hover:border-accent/40 rounded-xl p-5 sm:p-6 flex items-center gap-4 transition-all hover:-translate-y-1 group"
+                                className="relative bg-primary/30 backdrop-blur-md border border-white/8 hover:border-accent/40 rounded-xl p-5 sm:p-6 flex items-center gap-4 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/10 group overflow-hidden"
                             >
-                                <span className="material-symbols-outlined text-accent text-2xl group-hover:scale-110 transition-transform">
+                                {/* Top shine line */}
+                                <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent pointer-events-none" />
+                                <span className="material-symbols-outlined text-accent text-2xl group-hover:scale-110 transition-transform shrink-0">
                                     {item.icon}
                                 </span>
                                 <div>
@@ -70,7 +75,7 @@ export default function GitHubActivity() {
                     </div>
                 </AnimatedSection>
 
-            </div >
-        </section >
+            </div>
+        </section>
     )
 }

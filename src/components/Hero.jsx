@@ -11,29 +11,53 @@ export default function Hero() {
         <AnimatedSection direction="left" delay={100}>
           <div className="relative flex flex-col items-center lg:items-start order-2 lg:order-1 animate-fade-up gap-4">
             <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-112.5 lg:h-112.5">
-              <div className="absolute -inset-4 bg-accent/20 blur-3xl rounded-full"></div>
-              <div className="relative w-full h-full border-2 border-accent p-2 shadow-2xl overflow-hidden bg-secondary/30 backdrop-blur-sm rounded-full hover:shadow-[0_0_30px_rgba(113,90,90,0.5)] transition-all duration-500">
+
+              {/* Ambient glow behind the image */}
+              <div className="absolute -inset-4 bg-accent/20 blur-3xl rounded-full" />
+
+              {/* Profile ring — glass */}
+              <div className="
+                relative w-full h-full rounded-full p-2 overflow-hidden
+                bg-secondary/20 backdrop-blur-md
+                border-2 border-accent/60
+                shadow-2xl shadow-black/40
+                hover:shadow-[0_0_40px_rgba(113,90,90,0.5)]
+                hover:border-accent
+                transition-all duration-500
+              ">
                 <img
                   src={profileImg}
                   alt="Nilanjana"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 rounded-full hover:scale-105"
                 />
               </div>
-              {/* Status Badge */}
-              <div className="absolute -bottom-4 -right-2 sm:-right-4 lg:bottom-10 lg:-right-6 bg-primary border border-white/10 px-3 sm:px-6 py-2 sm:py-3 rounded-2xl shadow-2xl">
+
+              {/* Status Badge — glass */}
+              <div className="
+                absolute -bottom-4 -right-2 sm:-right-4 lg:bottom-10 lg:-right-6
+                px-3 sm:px-6 py-2 sm:py-3 rounded-2xl
+                bg-primary/40 backdrop-blur-xl
+                border border-white/12
+                shadow-xl shadow-black/30
+                overflow-hidden
+              ">
+                {/* Top shine */}
+                <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent" />
                 <div className="flex items-center gap-2 sm:gap-3">
-                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-[10px] sm:text-xs font-bold text-light-bg uppercase tracking-widest whitespace-nowrap">Open to projects</span>
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full animate-pulse" />
+                  <span className="text-[10px] sm:text-xs font-bold text-light-bg uppercase tracking-widest whitespace-nowrap">
+                    Open to projects
+                  </span>
                 </div>
               </div>
             </div>
 
-            {/* ✅ Name under profile pic */}
+            {/* Name under profile pic */}
             <AnimatedSection direction="up" delay={300}>
               <div className="text-center lg:text-left mt-6">
-                <span className='text-lg sm:text-xl font-bold text-light-bg'>Hi, I'm</span>
+                <span className="text-lg sm:text-xl font-bold text-light-bg">Hi, I'm</span>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-light-bg">
-                  <span className="text-accent">Nilanjana</span> Das <span className='text-accent'>Jui</span>
+                  <span className="text-accent">Nilanjana</span> Das <span className="text-accent">Jui</span>
                 </h1>
               </div>
             </AnimatedSection>
@@ -43,18 +67,27 @@ export default function Hero() {
 
         {/* Text Content */}
         <AnimatedSection direction="right" delay={200}>
-          <div className="flex flex-col gap-6 sm:gap-8 lg:gap-10 order-1 lg:order-2 animate-fade-up text-center lg:text-left" style={{ animationDelay: '0.2s' }}>
+          <div
+            className="flex flex-col gap-6 sm:gap-8 lg:gap-10 order-1 lg:order-2 animate-fade-up text-center lg:text-left"
+            style={{ animationDelay: '0.2s' }}
+          >
 
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/20 border border-accent/30 text-light-bg text-xs font-bold uppercase tracking-widest w-fit mx-auto lg:mx-0">
+            {/* Role badge — glass pill */}
+            <div className="
+              inline-flex items-center gap-2 px-4 py-1.5 rounded-full w-fit mx-auto lg:mx-0
+              bg-accent/15 backdrop-blur-md
+              border border-accent/30
+              text-light-bg text-xs font-bold uppercase tracking-widest
+              shadow-lg shadow-accent/10
+            ">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
               </span>
               Frontend Developer · CSE Student
             </div>
 
-            {/* H1 — tagline only */}
+            {/* H1 — tagline */}
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-tight tracking-tight text-light-bg">
               I build{' '}
               <TypeAnimation
@@ -77,12 +110,32 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-4 sm:gap-5 justify-center lg:justify-start">
-              <a href="#projects"
-                className="bg-accent hover:bg-accent-hover text-white px-7 sm:px-10 py-4 sm:py-5 rounded-xl font-bold transition-all shadow-xl shadow-accent/10 transform hover:-translate-y-1 text-sm sm:text-base">
+              {/* Primary CTA — stays solid accent, unchanged */}
+              <a
+                href="#projects"
+                className="bg-accent hover:bg-accent-hover text-white px-7 sm:px-10 py-4 sm:py-5 rounded-xl font-bold transition-all shadow-xl shadow-accent/20 transform hover:-translate-y-1 text-sm sm:text-base"
+              >
                 View Projects
               </a>
-              <a href="https://github.com/nilanjanajui" target="_blank" rel="noreferrer"
-                className="bg-white/5 hover:bg-white/10 text-light-bg border border-white/10 px-7 sm:px-10 py-4 sm:py-5 rounded-xl font-bold transition-all flex items-center gap-2 transform hover:-translate-y-1 text-sm sm:text-base">
+
+              {/* GitHub — glass button */}
+              <a
+                href="https://github.com/nilanjanajui"
+                target="_blank"
+                rel="noreferrer"
+                className="
+                  px-7 sm:px-10 py-4 sm:py-5 rounded-xl
+                  bg-white/5 backdrop-blur-md
+                  border border-white/12
+                  text-light-bg font-bold
+                  flex items-center gap-2
+                  shadow-lg shadow-black/20
+                  hover:bg-white/10 hover:border-white/20
+                  transform hover:-translate-y-1
+                  transition-all duration-300
+                  text-sm sm:text-base
+                "
+              >
                 <span className="material-symbols-outlined text-base sm:text-lg">code</span>
                 GitHub
               </a>

@@ -33,8 +33,8 @@ export default function ProjectsGrid() {
                 onClick={() => setActiveTag(tag)}
                 className={`px-5 py-2 rounded-full text-sm font-bold transition-all border ${
                   activeTag === tag
-                    ? 'bg-accent text-white border-accent'
-                    : 'bg-transparent text-text-dim border-white/10 hover:border-accent/50 hover:text-light-bg'
+                    ? 'bg-accent text-white border-accent shadow-lg shadow-accent/20'
+                    : 'bg-white/5 backdrop-blur-md text-text-dim border-white/8 hover:border-accent/50 hover:text-light-bg hover:bg-white/10'
                 }`}
               >
                 {tag}
@@ -46,17 +46,23 @@ export default function ProjectsGrid() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {filtered.map((project, index) => (
             <AnimatedSection key={project.title} direction="up" delay={index * 150}>
-              <div className="group flex flex-col bg-primary rounded-xl border border-white/5 overflow-hidden hover:shadow-2xl hover:border-accent/50 hover:-translate-y-2 transition-all duration-300 h-full">
+              <div className="group flex flex-col bg-primary/30 backdrop-blur-md rounded-xl border border-white/8 overflow-hidden hover:shadow-2xl hover:shadow-accent/10 hover:border-accent/40 hover:-translate-y-2 transition-all duration-300 h-full relative">
 
-                <div className="h-44 sm:h-52 lg:h-56 w-full bg-secondary/50 overflow-hidden relative">
+                {/* Top shine line */}
+                <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent z-10 pointer-events-none" />
+
+                <div className="h-44 sm:h-52 lg:h-56 w-full bg-secondary/30 overflow-hidden relative">
                   <img
                     src={project.image}
                     alt={project.title}
                     loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
                   />
+                  {/* Image overlay for depth */}
+                  <div className="absolute inset-0 bg-linear-to-t from-primary/60 via-transparent to-transparent" />
+
                   <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
-                    <span className="bg-accent text-white text-[10px] font-bold px-2 sm:px-2.5 py-1 rounded-md uppercase tracking-wider">
+                    <span className="bg-accent/80 backdrop-blur-md text-white text-[10px] font-bold px-2 sm:px-2.5 py-1 rounded-md uppercase tracking-wider border border-white/10 shadow-lg">
                       {project.tag}
                     </span>
                   </div>
@@ -69,16 +75,16 @@ export default function ProjectsGrid() {
                   {/* Tech stack chips on hover */}
                   <div className="flex flex-wrap gap-1.5 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-h-0 group-hover:max-h-20 overflow-hidden">
                     {project.techStack?.slice(0, 4).map(tech => (
-                      <span key={tech} className="text-[10px] font-bold bg-accent/20 text-accent px-2 py-0.5 rounded-full border border-accent/20">
+                      <span key={tech} className="text-[10px] font-bold bg-accent/20 backdrop-blur-sm text-accent px-2 py-0.5 rounded-full border border-accent/20">
                         {tech}
                       </span>
                     ))}
                   </div>
 
-                  <div className="mt-auto flex items-center justify-between pt-4 sm:pt-6 border-t border-white/5 gap-3">
+                  <div className="mt-auto flex items-center justify-between pt-4 sm:pt-6 border-t border-white/8 gap-3">
                     <button
                       onClick={() => navigate(`/projects/${project.id}`)}
-                      className="bg-accent hover:bg-accent-hover text-white text-sm font-bold px-4 py-2 rounded-lg transition-all hover:-translate-y-0.5"
+                      className="bg-accent hover:bg-accent-hover text-white text-sm font-bold px-4 py-2 rounded-lg transition-all hover:-translate-y-0.5 shadow-md shadow-accent/20"
                     >
                       View Details
                     </button>

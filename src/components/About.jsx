@@ -14,6 +14,8 @@ export default function About() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-center">
+
+          {/* Left — Text + Stats */}
           <AnimatedSection direction="left">
             <div className="animate-fade-up">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-10 sm:mb-10 text-light-bg">
@@ -43,41 +45,61 @@ export default function About() {
               </p>
               <p className="text-base sm:text-lg leading-relaxed text-text-dim font-medium mb-8 sm:mb-12">
                 Outside of coding, I enjoy photography - it taught me to notice light, framing, and detail,
-                which directly shaped how I think about UI design. I also love reading about space, 
+                which directly shaped how I think about UI design. I also love reading about space,
                 history, and technology, and occasionally sketch UI ideas on paper before touching the keyboard.
               </p>
 
+              {/* Stats — glass cards */}
               <div className="grid grid-cols-3 gap-3 sm:gap-6">
                 {stats.map((stat, index) => (
                   <AnimatedSection key={index} direction="up" delay={index * 200}>
-                  <div
-                    key={stat.label}
-                    className="bg-primary p-4 sm:p-6 rounded-xl text-center border border-white/5"
-                  >
-                    <span className="block text-2xl sm:text-3xl font-black text-accent">
-                      {stat.value}
-                    </span>
-                    <span className="text-[10px] uppercase font-bold tracking-widest text-text-dim">
-                      {stat.label}
-                    </span>
-                  </div>
+                    <div className="
+                      relative p-4 sm:p-6 rounded-2xl text-center overflow-hidden
+                      bg-primary/30 backdrop-blur-md
+                      border border-white/8
+                      shadow-lg shadow-black/20
+                      hover:bg-primary/40 hover:border-accent/20
+                      transition-all duration-300
+                    ">
+                      {/* Top shine */}
+                      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
+                      <span className="block text-2xl sm:text-3xl font-black text-accent">
+                        {stat.value}
+                      </span>
+                      <span className="text-[10px] uppercase font-bold tracking-widest text-text-dim">
+                        {stat.label}
+                      </span>
+                    </div>
                   </AnimatedSection>
                 ))}
               </div>
             </div>
           </AnimatedSection>
 
+          {/* Right — Terminal Card */}
           <AnimatedSection direction="right" delay={300}>
             <div className="relative hidden lg:flex justify-center items-center">
-              <div className="absolute w-96 h-96 bg-accent/20 blur-[80px] rounded-full"></div>
+              <div className="absolute w-96 h-96 bg-accent/20 blur-[80px] rounded-full" />
 
-              {/* Terminal Card */}
-              <div className="relative z-10 w-full max-w-md bg-primary border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
-                {/* Terminal Header */}
-                <div className="flex items-center gap-2 px-4 py-3 bg-secondary border-b border-white/5">
-                  <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+              {/* Terminal — glass card */}
+              <div className="
+                relative z-10 w-full max-w-md rounded-2xl overflow-hidden
+                bg-primary/30 backdrop-blur-xl
+                border border-white/10
+                shadow-2xl shadow-black/40
+              ">
+                {/* Top shine */}
+                <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent z-20" />
+
+                {/* Terminal Header — nested glass layer */}
+                <div className="
+                  flex items-center gap-2 px-4 py-3
+                  bg-white/5 backdrop-blur-sm
+                  border-b border-white/8
+                ">
+                  <div className="w-3 h-3 rounded-full bg-red-500/80" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+                  <div className="w-3 h-3 rounded-full bg-green-500/80" />
                   <span className="ml-2 text-xs text-text-dim font-mono">
                     nilanjana.js
                   </span>
@@ -96,25 +118,19 @@ export default function About() {
                     <div>
                       <span className="text-text-dim">name</span>
                       <span className="text-light-bg">: </span>
-                      <span className="text-green-400">
-                        "Nilanjana Das Jui"
-                      </span>
+                      <span className="text-green-400">"Nilanjana Das Jui"</span>
                       <span className="text-light-bg">,</span>
                     </div>
                     <div>
                       <span className="text-text-dim">role</span>
                       <span className="text-light-bg">: </span>
-                      <span className="text-green-400">
-                        "Frontend Developer"
-                      </span>
+                      <span className="text-green-400">"Frontend Developer"</span>
                       <span className="text-light-bg">,</span>
                     </div>
                     <div>
                       <span className="text-text-dim">university</span>
                       <span className="text-light-bg">: </span>
-                      <span className="text-green-400">
-                        "Univ. of Chittagong"
-                      </span>
+                      <span className="text-green-400">"Univ. of Chittagong"</span>
                       <span className="text-light-bg">,</span>
                     </div>
                     <div>
@@ -130,9 +146,7 @@ export default function About() {
                     <div>
                       <span className="text-text-dim">openTo</span>
                       <span className="text-light-bg">: </span>
-                      <span className="text-green-400">
-                        "New Opportunities"
-                      </span>
+                      <span className="text-green-400">"New Opportunities"</span>
                       <span className="text-light-bg">,</span>
                     </div>
                     <div>
@@ -146,18 +160,19 @@ export default function About() {
                     <span className="text-light-bg">{"}"}</span>
                   </div>
 
-                  {/* Blinking cursor line */}
+                  {/* Blinking cursor */}
                   <div className="flex items-center gap-1 pt-2">
                     <span className="text-accent">▶</span>
                     <span className="text-text-dim text-xs">
                       Ready to build something great
                     </span>
-                    <span className="inline-block w-2 h-4 bg-accent/80 animate-pulse ml-1"></span>
+                    <span className="inline-block w-2 h-4 bg-accent/80 animate-pulse ml-1" />
                   </div>
                 </div>
               </div>
             </div>
           </AnimatedSection>
+
         </div>
       </div>
     </section>
