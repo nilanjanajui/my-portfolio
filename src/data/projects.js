@@ -3,6 +3,7 @@ import roamRadarImg from '../assets/Roamradar.png'
 import jobImg from '../assets/job.png'
 import issueImg from '../assets/issue.png'
 import keenKeeperImg from '../assets/keenkeeper.png'
+import wizardImg from '../assets/wizard.png'
 
 export const projects = [
     {
@@ -32,6 +33,40 @@ export const projects = [
             'Add a shopping cart and checkout flow with payment gateway integration.',
             'Add product reviews and ratings submitted by authenticated users.',
             'Implement wishlist functionality with persistent storage per user account.',
+        ],
+    },
+    {
+        id: 'wizarding-world',
+        title: 'Wizarding World',
+        tag: 'React',
+        description: 'A Harry Potter companion web app to explore characters, relive the films, discover your Hogwarts house, and dive into wizarding lore - built as a self-driven passion project.',
+        highlight: 'House-themed 3D tilt cards, golden SparkleTrail cursor effect, shared CharactersContext, lazy-loaded routes, and AnimatePresence page transitions.',
+        image: wizardImg,
+        link: 'https://wizarding-world-sooty.vercel.app/',
+        github: 'https://github.com/nilanjanajui/wizarding-world',
+        techStack: ['React 18', 'Vite', 'Tailwind CSS v4', 'Framer Motion', 'React Router v6', 'HTML5 Canvas API', 'HP API', 'PotterDB API'],
+        features: [
+            'Characters page - 4000+ characters from PotterDB API with status filtering, smart sorting, and per-house glow with 3D tilt cards using Framer Motion useMotionValue + useSpring',
+            'SparkleTrail - full-screen canvas cursor effect with physics-based gold particles, 4 shapes, 5-color palette, and shadowBlur glow on 40% of particles',
+            'Shared CharactersContext - single API fetch with enrichment logic, loading states, and retry callback exposed to all consumers via React Context API',
+            'Lazy-loaded routes - all pages use React.lazy() with per-route Suspense boundaries via a withSuspense helper for minimal initial bundle size',
+            'AnimatePresence page transitions - keyed on location.pathname for seamless route-to-route animation',
+            'Sorting Hat - interactive ceremony that sorts users into their Hogwarts house',
+            'Favourites - persist favourite characters across sessions using localStorage',
+            'WizardStats - real data-driven ActorLineChart with error state and retry functionality',
+        ],
+        challenges: [
+            'Both the Home and Characters pages were independently fetching the same HP API endpoint - eliminated by building a shared CharactersContext with a single fetch, centralized enrichment, and a retryKey-based retry mechanism.',
+            'The SparkleTrail animation loop used useCallback for a recursive requestAnimationFrame call, causing an ESLint temporal dead zone violation - fixed with a useRef-based pattern, the idiomatic React approach for self-referencing loops.',
+            'Framer Motion\'s 3D tilt transforms and Tailwind\'s transition-all were both targeting the transform property simultaneously, causing jitter - resolved by scoping Tailwind to transition-colors so each library owned a distinct responsibility.',
+            'House-specific color classes built from dynamic strings like text-${house}-500 were stripped by Tailwind\'s static analysis at build time - replaced with a centralized HOUSE_CONFIG object using inline styles for a scalable solution.',
+            'The CharacterProfile route was declared outside the shared <Route element={<Layout />}> group, causing the page to render without the Navbar or page transitions - a single structural fix restored the full layout.',
+        ],
+        improvements: [
+            'Add an HP Trivia Quiz page with house-based scoring.',
+            'Build a Spells encyclopedia page with filtering by type and effect.',
+            'Add a side-by-side character comparison view.',
+            'Extract HOUSE_CONFIG and HOUSE_DEFS into a shared src/data/houseData.js for cleaner architecture.',
         ],
     },
     {
