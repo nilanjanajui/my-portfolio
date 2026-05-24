@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 
+import resumePDF from "../assets/resume.pdf";
+
 const NAV_ITEMS = ['home', 'projects', 'skills', 'about', 'education', 'experience', 'contact']
 
 export default function Header() {
@@ -63,7 +65,7 @@ export default function Header() {
 
             {/* Resume button */}
             <a
-              href="../assets/resume.pdf"
+              href={resumePDF}
               download
               className="bg-accent hover:bg-accent-hover text-white px-4 md:px-6 py-2 md:py-2.5 rounded-xl text-sm font-bold transition-all flex items-center gap-1.5 md:gap-2 transform hover:-translate-y-0.5 shadow-lg shadow-accent/20"
             >
@@ -104,7 +106,7 @@ export default function Header() {
           ))}
           
           <a
-            href="../assets/resume.pdf"
+            href={resumePDF}
             download
             className="mt-2 flex items-center justify-center gap-2 bg-white/5 backdrop-blur-sm border border-white/15 text-light-bg px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-white/10 transition-all"
           >
