@@ -4,8 +4,53 @@ import jobImg from '../assets/job.png'
 import issueImg from '../assets/issue.png'
 import keenKeeperImg from '../assets/keenkeeper.png'
 import wizardImg from '../assets/wizard.png'
+import driveFleetImg from '../assets/drivefleet.png'
 
 export const projects = [
+
+    {
+        id: 'drivefleet',
+        title: 'DriveFleet',
+        tag: 'Full Stack',
+        description: 'A premium car rental platform where users can explore, book, and manage vehicles with secure authentication, advanced search, booking management, and personalized dashboards.',
+        highlight: 'Better Auth with cross-domain HTTPOnly cookies, full CRUD car management, smart booking system, advanced MongoDB-powered filtering, and responsive modern UI.',
+        image: driveFleetImg,
+        link: 'https://drivefleet-client-sigma.vercel.app',
+        github: 'https://github.com/nilanjanajui/drivefleet-client',
+        techStack: [
+            'Next.js 16',
+            'React',
+            'Tailwind CSS v4',
+            'HeroUI',
+            'Better Auth',
+            'MongoDB',
+            'Axios',
+            'Framer Motion',
+            'Lucide React',
+            'React Hot Toast',
+        ],
+        features: [
+            'Secure authentication with email/password and Google OAuth using Better Auth with HTTPOnly cross-domain cookies for persistent sessions',
+            'Full car listing management allowing users to add, edit, and delete their own vehicle listings with images, pricing, seating capacity, and pickup locations',
+            'Smart booking system with booking status tracking, optional driver requests, special notes, and popularity-based booking analytics',
+            'Advanced search, filtering, and sorting powered by MongoDB queries including name search, category filters, popularity ranking, and price sorting',
+            'Personal booking dashboard with Active, Pending, and Cancelled tabs, booking cancellation workflow, and one-click re-booking',
+            'Responsive UI featuring HeroUI components, Framer Motion animations, toast notifications, and protected routes',
+        ],
+        challenges: [
+            'Implementing Better Auth across separate Vercel and Render deployments required configuring secure HTTPOnly cookies with SameSite=None while maintaining authentication persistence after page refreshes.',
+            'Building private route protection in the Next.js App Router while preventing unauthorized users from accessing booking and management pages required careful client-side session handling.',
+            'Creating a flexible search and filtering system that combined MongoDB $regex searches, category filtering, popularity ranking, and multiple sort options without sacrificing performance.',
+            'Keeping booking data, car availability, popularity tracking, and user-specific dashboards synchronized across multiple collections and user actions.',
+        ],
+        improvements: [
+            'Integrate online payment gateways for secure booking payments.',
+            'Add real-time vehicle availability updates and booking conflict prevention.',
+            'Implement user reviews and ratings for cars and drivers.',
+            'Add an admin dashboard with analytics, moderation tools, and fleet management insights.',
+        ],
+    },
+
     {
         id: 'suncart',
         title: 'SunCart',
