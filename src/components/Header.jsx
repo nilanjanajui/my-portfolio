@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 import resumePDF from "../assets/resume.pdf";
 
@@ -8,6 +9,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
   const [scrolled, setScrolled] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,13 +28,25 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+
+  const handleNavClick = (e, item) => {
+    setActiveSection(item)
+    if (location.pathname !== '/') {
+      e.preventDefault()
+      navigate('/')
+      setTimeout(() => {
+        document.getElementById(item)?.scrollIntoView({ behavior: 'smooth' })
+      }, 150)
+    }
+    setMenuOpen(false)
+  }
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
-        scrolled
-          ? 'border-b border-white/8 bg-primary/40 backdrop-blur-xl shadow-lg shadow-black/20'
-          : 'border-b border-transparent bg-transparent backdrop-blur-sm'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${scrolled
+        ? 'border-b border-white/8 bg-primary/40 backdrop-blur-xl shadow-lg shadow-black/20'
+        : 'border-b border-transparent bg-transparent backdrop-blur-sm'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-12 md:h-16 items-center justify-between gap-4">
@@ -48,12 +63,11 @@ export default function Header() {
               <a
                 key={item}
                 href={`#${item}`}
-                onClick={() => setActiveSection(item)}
-                className={`px-4 py-1.5 rounded-full text-sm font-semibold capitalize transition-all duration-200 ${
-                  activeSection === item
-                    ? 'bg-accent/20 backdrop-blur-sm border border-accent/50 text-light-bg shadow-[0_0_14px_rgba(113,90,90,0.35)]'
-                    : 'text-text-dim hover:text-light-bg hover:bg-white/8 border border-transparent'
-                }`}
+                onClick={(e) => handleNavClick(e, item)}
+                className={`px-4 py-1.5 rounded-full text-sm font-semibold capitalize transition-all duration-200 ${activeSection === item
+                  ? 'bg-accent/20 backdrop-blur-sm border border-accent/50 text-light-bg shadow-[0_0_14px_rgba(113,90,90,0.35)]'
+                  : 'text-text-dim hover:text-light-bg hover:bg-white/8 border border-transparent'
+                  }`}
               >
                 {item}
               </a>
@@ -91,20 +105,19 @@ export default function Header() {
       {menuOpen && (
         <div className="md:hidden bg-primary/40 backdrop-blur-xl border-t border-white/8 px-4 py-4 flex flex-col gap-1 shadow-xl shadow-black/30">
           {NAV_ITEMS.map((item) => (
-            <a  
+            <a
               key={item}
               href={`#${item}`}
-              onClick={() => { setMenuOpen(false); setActiveSection(item) }}
-              className={`px-4 py-2.5 rounded-xl text-sm font-semibold capitalize transition-all ${
-                activeSection === item
-                  ? 'text-accent bg-accent/15 border border-accent/25 backdrop-blur-sm'
-                  : 'text-text-dim hover:text-light-bg hover:bg-white/8 border border-transparent'
-              }`}
+              onClick={(e) => handleNavClick(e, item)}
+              className={`px-4 py-2.5 rounded-xl text-sm font-semibold capitalize transition-all ${activeSection === item
+                ? 'text-accent bg-accent/15 border border-accent/25 backdrop-blur-sm'
+                : 'text-text-dim hover:text-light-bg hover:bg-white/8 border border-transparent'
+                }`}
             >
               {item}
             </a>
           ))}
-          
+
           <a
             href={resumePDF}
             download
