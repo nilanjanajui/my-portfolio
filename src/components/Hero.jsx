@@ -46,7 +46,7 @@ export default function Hero() {
                 <div className="flex items-center gap-2 sm:gap-3">
                   <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full animate-pulse" />
                   <span className="text-[10px] sm:text-xs font-bold text-light-bg uppercase tracking-widest whitespace-nowrap">
-                    Open to projects
+                    Open to Internships
                   </span>
                 </div>
               </div>
@@ -139,12 +139,34 @@ export default function Hero() {
                 <span className="material-symbols-outlined text-base sm:text-lg">code</span>
                 GitHub
               </a>
+
+              {/* LinkedIn — glass button */}
+              <a
+                href="https://www.linkedin.com/in/nilanjana-jui-759402286"
+                target="_blank"
+                rel="noreferrer"
+                className="
+                  px-7 sm:px-10 py-4 sm:py-5 rounded-xl
+                  bg-white/5 backdrop-blur-md
+                  border border-white/12
+                  text-light-bg font-bold
+                  flex items-center gap-2
+                  shadow-lg shadow-black/20
+                hover:bg-white/10 hover:border-white/20
+                  transform hover:-translate-y-1
+                  transition-all duration-300
+                  text-sm sm:text-base
+                "
+              >
+                <span className="material-symbols-outlined text-base sm:text-lg">person</span>
+                LinkedIn
+              </a>
             </div>
 
           </div>
         </AnimatedSection>
 
-      </div>
-    </section>
+      </div >
+    </section >
   )
 }
