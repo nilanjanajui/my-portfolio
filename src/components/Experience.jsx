@@ -2,29 +2,29 @@ import AnimatedSection from './AnimatedSection'
 
 const experiences = [
   {
-    period: "2023 – Present",
+    period: "2023 - Present",
     role: "Independent Full-Stack Developer",
     description:
-      "Self-directed developer with 7 deployed applications spanning React, Next.js, Flask, and MongoDB. Focused on building production-ready systems with real auth, real databases, and real deployment challenges — not just tutorials.",
+      "Self-directed developer with 7 deployed applications spanning React, Next.js, Flask, and MongoDB. Focused on building production-ready systems with real auth, real databases, and real deployment challenges - not just tutorials.",
     highlights: [
-      "Built DriveFleet — MERN car rental platform with BetterAuth & cross-domain cookies",
-      "Built Database Design Studio — Flask + React ETL app with 3NF normalization engine",
-      "Built SunCart — Next.js eCommerce app with MongoDB Atlas & Google OAuth",
+      "Built DriveFleet - MERN car rental platform with BetterAuth & cross-domain cookies",
+      "Built Database Design Studio - Flask + React ETL app with 3NF normalization engine",
+      "Built SunCart - Next.js eCommerce app with MongoDB Atlas & Google OAuth",
       "Deployed all projects on Vercel & Netlify with CI/CD pipelines",
       "Resolved production bugs: CORS, auth persistence, Tailwind v4 cascade conflicts",
-      "Currently building Jarvis — AI voice assistant with Groq LLaMA + ElevenLabs TTS",
+      "Currently building Jarvis - AI voice assistant with Groq LLaMA + ElevenLabs TTS",
     ],
   },
   {
-    period: "2023 – Present",
+    period: "2023 - Present",
     role: "B.Sc. CSE · University of Chittagong",
     description:
-      "Studying Computer Science & Engineering with strong academic foundations applied directly in real projects — from database normalization algorithms to OS process scheduling and embedded systems.",
+      "Studying Computer Science & Engineering with strong academic foundations applied directly in real projects - from database normalization algorithms to OS process scheduling and embedded systems.",
     highlights: [
       "Data Structures & Algorithms in C++",
-      "Database systems — normalization to 3NF, ER modeling",
-      "Operating Systems — scheduling, deadlocks, memory management",
-      "Software Engineering — UML, design patterns, SDLC",
+      "Database systems - normalization to 3NF, ER modeling",
+      "Operating Systems - scheduling, deadlocks, memory management",
+      "Software Engineering - UML, design patterns, SDLC",
       "HSC: GPA 5.00 / 5.00 (Science)",
       "Expected graduation: 2027",
     ],
