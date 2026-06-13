@@ -1,24 +1,25 @@
 import AnimatedSection from './AnimatedSection'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import toast from 'react-hot-toast'
 
 export default function Contact() {
   const form = useRef()
 
-  const sendEmail = (e) => {
-    e.preventDefault()
-    emailjs.sendForm(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      form.current,
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    ).then(() => {
-      alert('Message sent!')
-      form.current.reset()
-    }).catch(() => {
-      alert('Something went wrong. Try again.')
-    })
-  }
+const sendEmail = (e) => {
+  e.preventDefault()
+  emailjs.sendForm(
+    import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    form.current,
+    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+  ).then(() => {
+    toast.success('Message sent!')
+    form.current.reset()
+  }).catch(() => {
+    toast.error('Something went wrong. Try again.')
+  })
+}
 
   return (
   <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6" id="contact">

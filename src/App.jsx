@@ -11,10 +11,27 @@ import Experience from "./components/Experience"
 import Education from "./components/Education"
 import Contact from "./components/Contact"
 import ProjectDetail from "./components/ProjectDetail"
+import { Toaster } from 'react-hot-toast'
 
 export default function App() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-primary text-light-bg selection:bg-accent selection:text-white">
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          style: {
+            background: '#1e1e2a',
+            color: '#f0ece8',
+            border: '1px solid rgba(255,255,255,0.08)',
+            borderRadius: '12px',
+            fontSize: '14px',
+            fontWeight: '600',
+          },
+          success: {
+            iconTheme: { primary: '#715A5A', secondary: '#fff' },
+          },
+        }}
+      />
 
       {/* Ambient background orbs — required for glassmorphism blur to have something to render against */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
