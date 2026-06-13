@@ -14,7 +14,7 @@ This repository contains the source code for my personal **developer portfolio w
 It serves as a central place where visitors can explore the projects I have built, learn about the technologies I work with, and get an overview of my development journey. The portfolio highlights selected work, demonstrates my approach to building web applications, and provides an easy way for recruiters, collaborators, and other developers to connect with me.
 
 🔗 **Portfolio:**
-[https://nilanjana-jui-portfolio.netlify.app/](https://nilanjana-jui-portfolio.netlify.app/)
+[https://nilanjana-jui-portfolio.netlify.app/](https://nilanjana-jui-portfolio.netlify.app)
 
 ---
 
