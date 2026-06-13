@@ -1,6 +1,6 @@
 # 🌐 Personal Portfolio
 
-![Portfolio Preview](https://api.microlink.io/?url=https://nilanjana-jui-portfolio.netlify.app/\&screenshot=true\&meta=false\&embed=screenshot.url)
+![Portfolio Preview](https://api.microlink.io/?url=https://nilanjana-jui-portfolio.netlify.app\&screenshot=true\&meta=false\&embed=screenshot.url)
 
 [![Live Site](https://img.shields.io/badge/Live%20Portfolio-Visit%20Website-0ea5e9?style=for-the-badge\&logo=netlify\&logoColor=white)](https://nilanjana-jui-portfolio.netlify.app/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge\&logo=github)](#)
