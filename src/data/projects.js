@@ -1,12 +1,12 @@
-import sunCartImg from '../assets/suncart.png'
-import roamRadarImg from '../assets/Roamradar.png'
-import jobImg from '../assets/job.png'
-import issueImg from '../assets/issue.png'
-import keenKeeperImg from '../assets/keenkeeper.png'
-import wizardImg from '../assets/wizard.png'
-import driveFleetImg from '../assets/drivefleet.png'
-import Jarvis from '../assets/jarvis.png'
-import DevMatch from '../assets/devmatch.png'
+import sunCartImg from '../assets/suncart.webp'
+import roamRadarImg from '../assets/Roamradar.webp'
+import jobImg from '../assets/job.webp'
+import issueImg from '../assets/issue.webp'
+import keenKeeperImg from '../assets/keenkeeper.webp'
+import wizardImg from '../assets/wizard.webp'
+import driveFleetImg from '../assets/drivefleet.webp'
+import Jarvis from '../assets/jarvis.webp'
+import DevMatch from '../assets/devmatch.webp'
 
 export const projects = [
 

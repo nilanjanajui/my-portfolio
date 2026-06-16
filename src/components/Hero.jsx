@@ -1,4 +1,4 @@
-import profileImg from '../assets/profile.jpg'
+import profileImg from '../assets/profile.webp'
 import AnimatedSection from './AnimatedSection'
 import { TypeAnimation } from 'react-type-animation'
 
