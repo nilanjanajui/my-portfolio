@@ -1,9 +1,9 @@
 import AnimatedSection from "./AnimatedSection";
 
 const stats = [
-  { value: "5+", label: "Projects" },
+  { value: "7", label: "Deployed Apps" },
+  { value: "40+", label: "Repositories" },
   { value: "500+", label: "Commits" },
-  { value: "100%", label: "Reliable" },
 ];
 
 export default function About() {
@@ -17,36 +17,41 @@ export default function About() {
 
           {/* Left — Text + Stats */}
           <AnimatedSection direction="left">
-            <div className="animate-fade-up">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-10 sm:mb-10 text-light-bg">
+            <div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-10 text-light-bg">
                 Passionate about <br />
                 <span className="text-white bg-accent px-3 rounded-lg mt-3 inline-block">
                   problem solving
                 </span>
               </h2>
+
               <p className="text-base sm:text-lg leading-relaxed text-text-dim font-medium mb-6 sm:mb-8">
                 I'm a Computer Science & Engineering student at the{" "}
                 <span className="text-light-bg font-bold">
                   University of Chittagong
                 </span>
                 , driven by curiosity and a love for building things that
-                actually work. My approach spans full-stack development,
-                database engineering, embedded systems, and UI/UX design.
+                actually work. I focus on full-stack development and UI/UX -
+                writing code that's readable, deployable, and solves real problems.
               </p>
+
               <p className="text-base sm:text-lg leading-relaxed text-text-dim font-medium mb-6 sm:mb-8">
                 I built a{" "}
                 <span className="text-light-bg font-bold">
                   Flask-based ETL web app
                 </span>{" "}
-                that automates database workflows - handling CSV, Excel, JSON,
+                that automates database workflows — handling CSV, Excel, JSON and
                 XML, cleaning data, detecting functional dependencies, computing
                 candidate keys, and normalizing to 3NF with a drag-and-drop
                 React interface.
               </p>
+
               <p className="text-base sm:text-lg leading-relaxed text-text-dim font-medium mb-8 sm:mb-12">
-                Outside of coding, I enjoy photography - it taught me to notice light, framing, and detail,
-                which directly shaped how I think about UI design. I also love reading about space,
-                history, and technology, and occasionally sketch UI ideas on paper before touching the keyboard.
+                Outside of coding, I enjoy photography - it taught me to notice
+                light, framing, and detail, which directly shaped how I think
+                about UI design. I also love reading about space, history, and
+                technology, and occasionally sketch UI ideas on paper before
+                touching the keyboard.
               </p>
 
               {/* Stats — glass cards */}
@@ -61,9 +66,8 @@ export default function About() {
                       hover:bg-primary/40 hover:border-accent/20
                       transition-all duration-300
                     ">
-                      {/* Top shine */}
                       <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
-                      <span className="block text-2xl sm:text-3xl font-black text-accent">
+                      <span className="block text-2xl sm:text-3xl font-black text-accent mb-1">
                         {stat.value}
                       </span>
                       <span className="text-[10px] uppercase font-bold tracking-widest text-text-dim">
@@ -81,17 +85,15 @@ export default function About() {
             <div className="relative hidden lg:flex justify-center items-center">
               <div className="absolute w-96 h-96 bg-accent/20 blur-[80px] rounded-full" />
 
-              {/* Terminal — glass card */}
               <div className="
                 relative z-10 w-full max-w-md rounded-2xl overflow-hidden
                 bg-primary/30 backdrop-blur-xl
                 border border-white/10
                 shadow-2xl shadow-black/40
               ">
-                {/* Top shine */}
                 <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent z-20" />
 
-                {/* Terminal Header — nested glass layer */}
+                {/* Terminal header */}
                 <div className="
                   flex items-center gap-2 px-4 py-3
                   bg-white/5 backdrop-blur-sm
@@ -105,7 +107,7 @@ export default function About() {
                   </span>
                 </div>
 
-                {/* Terminal Body */}
+                {/* Terminal body */}
                 <div className="p-6 font-mono text-sm space-y-3">
                   <div>
                     <span className="text-accent">const</span>
@@ -124,7 +126,7 @@ export default function About() {
                     <div>
                       <span className="text-text-dim">role</span>
                       <span className="text-light-bg">: </span>
-                      <span className="text-green-400">"Frontend Developer"</span>
+                      <span className="text-green-400">"MERN Stack Developer"</span>
                       <span className="text-light-bg">,</span>
                     </div>
                     <div>
@@ -134,20 +136,22 @@ export default function About() {
                       <span className="text-light-bg">,</span>
                     </div>
                     <div>
-                      <span className="text-text-dim">skills</span>
+                      <span className="text-text-dim">stack</span>
                       <span className="text-light-bg">: [</span>
+                      <span className="text-yellow-400">"MongoDB"</span>
+                      <span className="text-light-bg">, </span>
+                      <span className="text-yellow-400">"Express"</span>
+                      <span className="text-light-bg">, </span>
                       <span className="text-yellow-400">"React"</span>
                       <span className="text-light-bg">, </span>
-                      <span className="text-yellow-400">"Flask"</span>
-                      <span className="text-light-bg">, </span>
-                      <span className="text-yellow-400">"Python"</span>
+                      <span className="text-yellow-400">"Node"</span>
                       <span className="text-light-bg">],</span>
                     </div>
                     <div>
-                      <span className="text-text-dim">openTo</span>
+                      <span className="text-text-dim">deployed</span>
                       <span className="text-light-bg">: </span>
-                      <span className="text-green-400">"New Opportunities"</span>
-                      <span className="text-light-bg">,</span>
+                      <span className="text-blue-400">7</span>
+                      <span className="text-text-dim"> // apps in production</span>
                     </div>
                     <div>
                       <span className="text-text-dim">available</span>
@@ -160,7 +164,6 @@ export default function About() {
                     <span className="text-light-bg">{"}"}</span>
                   </div>
 
-                  {/* Blinking cursor */}
                   <div className="flex items-center gap-1 pt-2">
                     <span className="text-accent">▶</span>
                     <span className="text-text-dim text-xs">
