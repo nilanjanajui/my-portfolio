@@ -5,8 +5,71 @@ import issueImg from '../assets/issue.png'
 import keenKeeperImg from '../assets/keenkeeper.png'
 import wizardImg from '../assets/wizard.png'
 import driveFleetImg from '../assets/drivefleet.png'
+import Jarvis from '../assets/jarvis.png'
+import DevMatch from '../assets/devmatch.png'
 
 export const projects = [
+
+    {
+        id: 'jarvis',
+        title: 'Jarvis',
+        tag: 'AI',
+        status: 'In Progress',
+        description: 'An AI-powered voice assistant that lets you speak a prompt and hear an intelligent, natural-sounding response — built with a Next.js frontend, Flask backend pipeline, Groq LLaMA for inference, and ElevenLabs for text-to-speech.',
+        highlight: 'Real-time voice input, LLaMA 3 inference via Groq API, ElevenLabs TTS output, and a Flask pipeline connecting the stack end-to-end.',
+        image: Jarvis,
+        link: null,
+        github: 'https://github.com/nilanjanajui/jarvis',
+        techStack: ['Next.js', 'React', 'Tailwind CSS', 'Flask', 'Python', 'Groq LLaMA', 'ElevenLabs TTS'],
+        features: [
+            'Voice input captured from the browser and sent to a Flask backend for processing',
+            'Groq LLaMA 3 inference for fast, intelligent responses with a custom system prompt for natural conversation',
+            'ElevenLabs TTS converts the LLM response into natural-sounding audio played back in the browser',
+            'Next.js frontend with clean UI, audio playback controls, and conversation history',
+            'Flask backend pipeline handling request routing, Groq API calls, and ElevenLabs audio streaming',
+        ],
+        challenges: [
+            'CORS errors from localhost polling on Vercel required careful cross-origin configuration between Next.js frontend and Flask backend.',
+            'Groq 400/429 errors from malformed requests and rate limits required request validation and retry logic in the Flask pipeline.',
+            'Streaming ElevenLabs audio back to the browser without buffering the entire response required chunked transfer handling.',
+        ],
+        improvements: [
+            'Add persistent conversation memory so Jarvis remembers context across sessions.',
+            'Add wake word detection so the assistant activates hands-free.',
+            'Support multiple ElevenLabs voice profiles selectable from the UI.',
+        ],
+    },
+
+    {
+        id: 'devmatch',
+        title: 'DevMatch',
+        tag: 'Full Stack',
+        status: 'In Progress',
+        description: 'A developer collaboration platform where developers can post project ideas, find collaborators with matching skills, and build together — with full authentication, paginated feeds, and real-time updates.',
+        highlight: 'Better Auth with Next.js App Router, React Query for paginated data fetching, Tailwind v4 with resolved CSS cascade conflicts, and MongoDB with Mongoose.',
+        image: DevMatch,
+        link: null,
+        github: 'https://github.com/nilanjanajui/devmatch-client',
+        techStack: ['Next.js', 'React', 'Tailwind CSS v4', 'Better Auth', 'Express', 'MongoDB', 'Mongoose', 'React Query'],
+        features: [
+            'Full authentication with Better Auth — email/password and OAuth with persistent cross-domain session handling',
+            'Project idea feed with pagination via React Query — infinite scroll with background refetching',
+            'Post project ideas with required skills, team size, and description',
+            'Developer profiles with skill tags, GitHub link, and project history',
+            'Sidebar navigation with protected routes and role-based access control',
+        ],
+        challenges: [
+            'Mongoose and BetterAuth were targeting different user collections, causing auth to silently fail — resolved by aligning the Mongoose schema to BetterAuth\'s expected collection name.',
+            'Missing NEXT_PUBLIC_BETTER_AUTH_URL environment variable caused auth to break silently on Vercel without any error message — required tracking down the missing variable across both client and server configs.',
+            'Tailwind v4 CSS cascade layer conflict caused the sidebar to overlap main content — resolved by explicitly ordering layer declarations.',
+            'Paginated API responses were returning data nested inside a results key — required updating the React Query selector to extract the correct array before rendering.',
+        ],
+        improvements: [
+            'Add real-time notifications when someone requests to join your project.',
+            'Add in-app messaging between matched developers.',
+            'Add skill-based matching algorithm to suggest relevant projects automatically.',
+        ],
+    },
 
     {
         id: 'drivefleet',
