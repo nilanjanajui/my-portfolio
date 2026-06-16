@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 
 import resumePDF from "../assets/resume.pdf";
 
-const NAV_ITEMS = ['home', 'projects', 'skills', 'about', 'education', 'experience', 'contact']
+const NAV_ITEMS = ['home', 'projects', 'skills', 'about', 'education', 'contact']
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)

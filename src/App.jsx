@@ -54,7 +54,7 @@ export default function App() {
               <HowIBuild />
               <About />
               <Education />
-              <Experience />
+              {/*<Experience /> */}
               <Contact />
             </main>
           } />
