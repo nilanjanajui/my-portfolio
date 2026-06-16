@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 
 import resumePDF from "../assets/resume.pdf";
 
-const NAV_ITEMS = ['home', 'projects', 'skills', 'about', 'education', 'contact']
+const NAV_ITEMS = ['home', 'projects', 'skills', 'about', 'journey', 'education', 'contact']
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -18,9 +18,12 @@ export default function Header() {
       setScrolled(window.scrollY > 20)
       for (const id of [...NAV_ITEMS].reverse()) {
         const el = document.getElementById(id)
-        if (el && el.offsetTop <= scrollY) {
-          setActiveSection(id)
-          break
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.scrollY
+          if (top <= scrollY) {
+            setActiveSection(id)
+            break
+          }
         }
       }
     }

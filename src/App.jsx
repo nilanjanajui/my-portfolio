@@ -1,14 +1,14 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import FeaturedProject from "./components/FeaturedProject"
 import ProjectsGrid from "./components/ProjectsGrid"
 import GitHubActivity from './components/GitHubActivity'
 import Skills from "./components/Skills"
-import HowIBuild from "./components/HowIBuild"
 import About from "./components/About"
-import Experience from "./components/Experience"
+import Journey from "./components/Journey"
 import Education from "./components/Education"
+import HowIBuild from "./components/HowIBuild"
 import Contact from "./components/Contact"
 import ProjectDetail from "./components/ProjectDetail"
 import { Toaster } from 'react-hot-toast'
@@ -33,14 +33,13 @@ export default function App() {
         }}
       />
 
-      {/* Ambient background orbs — required for glassmorphism blur to have something to render against */}
+      {/* Ambient background orbs */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
         <div className="absolute top-[-10%] left-[-5%] w-96 h-96 bg-accent/15 blur-[100px] rounded-full" />
         <div className="absolute top-[40%] right-[-10%] w-80 h-80 bg-secondary/30 blur-[80px] rounded-full" />
         <div className="absolute bottom-[10%] left-[20%] w-72 h-72 bg-accent/10 blur-[90px] rounded-full" />
       </div>
 
-      {/* Main content sits above the orb layer */}
       <div className="relative z-10 flex flex-col min-h-screen w-full">
         <Header />
         <Routes>
@@ -51,14 +50,15 @@ export default function App() {
               <ProjectsGrid />
               <GitHubActivity />
               <Skills />
-              <HowIBuild />
               <About />
+              <Journey />
               <Education />
-              {/*<Experience /> */}
+              <HowIBuild />
               <Contact />
             </main>
           } />
           <Route path="/projects/:id" element={<ProjectDetail />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
 
