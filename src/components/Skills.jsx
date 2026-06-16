@@ -11,7 +11,6 @@ const skills = [
       { name: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
       { name: 'HTML', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
       { name: 'CSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
-      
     ],
   },
   {
@@ -19,6 +18,7 @@ const skills = [
     title: 'Backend & DB',
     tags: [
       { name: 'Node.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+      { name: 'Express', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
       { name: 'Flask', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg' },
       { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
       { name: 'SQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
@@ -30,8 +30,8 @@ const skills = [
     title: 'Authentication & Security',
     tags: [
       { name: 'JWT', logo: 'https://cdn.jsdelivr.net/npm/simple-icons/icons/jsonwebtokens.svg' },
-      { name: 'OAuth', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oauth/oauth-original.svg' },
       { name: 'Google Auth', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg' },
+      { name: 'Firebase', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg' },
     ],
   },
   {
@@ -60,8 +60,7 @@ const skills = [
     title: 'Embedded & Systems',
     tags: [
       { name: 'Arduino', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg' },
-      { name: 'C++', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
-      { name: 'Linux', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg' },
+      { name: 'GPS/GSM', logo: 'https://cdn.jsdelivr.net/npm/simple-icons/icons/googlemaps.svg' },
     ],
   },
   {
@@ -76,7 +75,7 @@ const skills = [
   },
 ]
 
-const darkLogos = ['GitHub', 'Express', 'Flask', 'Bash', 'Next.js']
+const darkLogos = ['GitHub', 'Express', 'Flask', 'Bash', 'Next.js', 'JWT', 'GPS/GSM']
 
 export default function Skills() {
   return (
@@ -89,7 +88,7 @@ export default function Skills() {
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4 text-light-bg">Technical Toolkit</h2>
             <div className="h-1.5 w-24 bg-accent rounded-full mb-6 sm:mb-8"></div>
             <p className="text-text-dim max-w-2xl text-base sm:text-lg px-2">
-              A full-spectrum skill set - from pixel-perfect interfaces to normalized databases and embedded systems.
+              A full-spectrum skill set — from pixel-perfect React interfaces to full-stack MERN systems and database engineering.
             </p>
           </div>
         </AnimatedSection>
@@ -107,10 +106,8 @@ export default function Skills() {
                 hover:bg-secondary/30 hover:border-white/12
                 transition-all duration-300
               ">
-                {/* Subtle inner top highlight — glass shine effect */}
                 <div className="absolute inset-x-0 top-0 h-px rounded-t-2xl bg-linear-to-r from-transparent via-white/15 to-transparent" />
 
-                {/* Icon + Title */}
                 <div className="flex flex-col sm:flex-row items-center sm:items-center gap-3 lg:gap-4 mb-6 sm:mb-8 lg:mb-10 text-center sm:text-left">
                   <div className="
                     rounded-2xl text-accent flex items-center justify-center shrink-0
@@ -126,7 +123,6 @@ export default function Skills() {
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-black text-light-bg tracking-tight">{skill.title}</h3>
                 </div>
 
-                {/* Tech Logos */}
                 <div className="flex flex-wrap justify-center sm:justify-start gap-3 lg:gap-4">
                   {skill.tags.map((tag) => (
                     <div key={tag.name} className="flex flex-col items-center gap-1.5 sm:gap-2 group/tag">
