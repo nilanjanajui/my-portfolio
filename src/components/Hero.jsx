@@ -28,7 +28,7 @@ export default function Hero() {
                 <img
                   src={profileImg}
                   alt="Nilanjana"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 rounded-full hover:scale-105"
+                  className="w-full h-full object-cover transition-all duration-700 rounded-full hover:scale-105"
                 />
               </div>
 
@@ -84,7 +84,7 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
               </span>
-              Frontend Developer · CSE Student
+              MERN Stack Developer · CSE Student
             </div>
 
             {/* H1 — tagline */}
