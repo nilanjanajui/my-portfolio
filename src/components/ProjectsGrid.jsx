@@ -51,20 +51,40 @@ export default function ProjectsGrid() {
                 {/* Top shine line */}
                 <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent z-10 pointer-events-none" />
 
+                {/* Image or placeholder */}
                 <div className="h-44 sm:h-52 lg:h-56 w-full bg-secondary/30 overflow-hidden relative">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
-                  />
-                  {/* Image overlay for depth */}
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-primary/40">
+                      <span className="material-symbols-outlined text-accent/40 text-5xl">code_blocks</span>
+                      <span className="text-text-dim/40 text-xs font-bold tracking-widest uppercase">In Development</span>
+                    </div>
+                  )}
+
+                  {/* Image overlay */}
                   <div className="absolute inset-0 bg-linear-to-t from-primary/60 via-transparent to-transparent" />
 
-                  <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
+                  {/* Top-right badges */}
+                  <div className="absolute top-3 sm:top-4 right-3 sm:right-4 flex flex-col items-end gap-2">
                     <span className="bg-accent/80 backdrop-blur-md text-white text-[10px] font-bold px-2 sm:px-2.5 py-1 rounded-md uppercase tracking-wider border border-white/10 shadow-lg">
                       {project.tag}
                     </span>
+                  </div>
+
+                  {/* Status badge */}
+                  <div className="absolute top-3 sm:top-4 left-3 sm:left-4 flex flex-col items-end gap-2">
+                    {project.status === 'In Progress' && (
+                      <span className="inline-flex items-center gap-1.5 bg-yellow-500/15 backdrop-blur-md text-yellow-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-yellow-500/25 shadow-lg">
+                        <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse" />
+                        In Progress
+                      </span>
+                    )}
                   </div>
                 </div>
 
@@ -89,11 +109,13 @@ export default function ProjectsGrid() {
                       View Details
                     </button>
                     <div className="flex items-center gap-3">
-                      <a href={project.link} target="_blank" rel="noreferrer"
-                        className="text-text-dim hover:text-accent transition-colors text-sm font-bold flex items-center gap-1">
-                        Demo
-                        <span className="material-symbols-outlined text-sm">open_in_new</span>
-                      </a>
+                      {project.link && (
+                        <a href={project.link} target="_blank" rel="noreferrer"
+                          className="text-text-dim hover:text-accent transition-colors text-sm font-bold flex items-center gap-1">
+                          Demo
+                          <span className="material-symbols-outlined text-sm">open_in_new</span>
+                        </a>
+                      )}
                       <a href={project.github} target="_blank" rel="noreferrer"
                         className="text-text-dim hover:text-accent transition-colors">
                         <span className="material-symbols-outlined">code</span>
