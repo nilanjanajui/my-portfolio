@@ -31,7 +31,7 @@ const skills = [
     tags: [
       { name: 'JWT', logo: 'https://cdn.jsdelivr.net/npm/simple-icons/icons/jsonwebtokens.svg' },
       { name: 'Google Auth', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg' },
-      { name: 'Firebase', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg' },
+      { name: 'BetterAuth', logo: 'https://avatars.githubusercontent.com/u/150895576' },
     ],
   },
   {
@@ -75,7 +75,7 @@ const skills = [
   },
 ]
 
-const darkLogos = ['GitHub', 'Express', 'Flask', 'Bash', 'Next.js', 'JWT', 'GPS/GSM']
+const darkLogos = ['GitHub', 'Express', 'Flask', 'Bash', 'Next.js', 'JWT', 'GPS/GSM', 'BetterAuth']
 
 export default function Skills() {
   return (
