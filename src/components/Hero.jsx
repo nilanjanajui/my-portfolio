@@ -28,6 +28,7 @@ export default function Hero() {
                 <img
                   src={profileImg}
                   alt="Nilanjana"
+                  loading="eager"
                   className="w-full h-full object-cover transition-all duration-700 rounded-full hover:scale-105"
                 />
               </div>
