@@ -87,10 +87,14 @@ export default function Contact() {
             <div className="h-px w-full max-w-5xl bg-white/5 mb-8 sm:mb-12"></div>
             <div className="flex flex-col md:flex-row justify-between w-full max-w-5xl text-text-dim font-medium text-xs sm:text-sm gap-3 sm:gap-6 text-center md:text-left">
               <p>© 2026 Nilanjana Das Jui. All rights reserved.</p>
-              <div className="flex justify-center md:justify-end gap-6 sm:gap-10">
-                <a href="#" className="hover:text-accent transition-colors">Privacy Policy</a>
-                <a href="#" className="hover:text-accent transition-colors">Open Source</a>
-              </div>
+              <a
+                href="https://github.com/nilanjanajui/my-portfolio"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-accent transition-colors"
+              >
+                View Source
+              </a>
             </div>
 
           </div>
