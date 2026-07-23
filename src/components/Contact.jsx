@@ -69,6 +69,8 @@ export default function Contact() {
                 { icon: 'chat', label: 'WhatsApp', href: 'https://wa.me/8801794437893' },
                 { icon: 'share', label: 'LinkedIn', href: 'https://www.linkedin.com/in/nilanjana-jui-759402286/' },
                 { icon: 'terminal', label: 'GitHub', href: 'https://github.com/nilanjanajui' },
+                { icon: 'facebook', label: 'Facebook', href: 'https://facebook.com/yourprofile' },
+                { icon: 'alternate_email', label: 'Twitter', href: 'https://twitter.com/yourprofile' },
               ].map((link, index) => (
                 <AnimatedSection key={link.label} direction="up" delay={index * 150}>
                   <a
