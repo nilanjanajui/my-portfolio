@@ -7,8 +7,42 @@ import wizardImg from '../assets/wizard.webp'
 import driveFleetImg from '../assets/drivefleet.webp'
 import urbanNestImg from '../assets/urbannest.webp'
 import rescueLinkImg from '../assets/rescuelink.webp'
+import databaseDesignStudioImg from '../assets/database-design-studio.png'
 
 export const projects = [
+    {
+    id: 'database-design-studio',
+    title: 'Database Design Studio',
+    tag: 'Full Stack',
+    description: 'A full-stack web application built with Flask and React.js that automates the entire database design workflow — from raw data upload to fully normalized schemas with ER diagram generation.',
+    image: databaseDesignStudioImg,
+    video: '/videos/demo1.mp4',
+    link: 'https://database-design-studio.netlify.app/',
+    github: 'https://github.com/nilanjanajui/Project--DataBase-Design-Studio',
+    techStack: ['React.js', 'Flask', 'Python', 'Pandas', 'Graphviz', 'Axios', 'Context API', 'React-Syntax-Highlighter', 'Font Awesome'],
+    features: [
+        'Upload CSV/Excel datasets and preprocess them with automated data cleaning',
+        'Automated normalization pipeline: 1NF → 2NF → 3NF with candidate key and superkey detection',
+        'Auto-detect functional dependencies including compound attributes',
+        'Dependency preservation and lossless join verification algorithms',
+        'Excel-like table viewer for browsing normalized tables dynamically',
+        'ER diagram generator with PK/FK detection, colored and styled via Graphviz',
+        'Interactive drag-and-drop workflow UI with connected flow lines',
+        'Code Panel showing the executed Python backend code for each step',
+    ],
+    challenges: [
+        'Implementing automatic functional dependency detection from raw tabular data required building a custom algorithm from scratch in Python — no library handles this directly.',
+        'Ensuring lossless join and dependency preservation during 3NF decomposition involved complex set theory logic that had to be verified against multiple edge-case datasets.',
+        'Rendering interactive ER diagrams dynamically required generating Graphviz SVG output on the Flask backend and passing it cleanly to the React frontend without rendering artifacts.',
+        'Building the drag-and-drop workflow UI with connected flow lines between blocks required custom positioning logic since no off-the-shelf library matched the required design.',
+    ],
+    improvements: [
+        'Add BCNF and 4NF decomposition stages beyond 3NF.',
+        'Allow users to export the final normalized schema directly as SQL CREATE TABLE statements.',
+        'Support JSON and XML as additional input formats alongside CSV and Excel.',
+        'Add a collaborative mode so multiple users can work on the same schema simultaneously.',
+    ]
+},
 
     {
         id: 'urbannest',
@@ -296,36 +330,3 @@ export const projects = [
     },
 ]
 
-export const featuredProject = {
-    id: 'database-design-studio',
-    title: 'Database Design Studio',
-    tag: 'Full Stack',
-    description: 'A full-stack web application built with Flask and React.js that automates the entire database design workflow — from raw data upload to fully normalized schemas with ER diagram generation.',
-    image: null,
-    video: '/videos/demo1.mp4',
-    link: 'https://database-design-studio.netlify.app/',
-    github: 'https://github.com/nilanjanajui/Project--DataBase-Design-Studio',
-    techStack: ['React.js', 'Flask', 'Python', 'Pandas', 'Graphviz', 'Axios', 'Context API', 'React-Syntax-Highlighter', 'Font Awesome'],
-    features: [
-        'Upload CSV/Excel datasets and preprocess them with automated data cleaning',
-        'Automated normalization pipeline: 1NF → 2NF → 3NF with candidate key and superkey detection',
-        'Auto-detect functional dependencies including compound attributes',
-        'Dependency preservation and lossless join verification algorithms',
-        'Excel-like table viewer for browsing normalized tables dynamically',
-        'ER diagram generator with PK/FK detection, colored and styled via Graphviz',
-        'Interactive drag-and-drop workflow UI with connected flow lines',
-        'Code Panel showing the executed Python backend code for each step',
-    ],
-    challenges: [
-        'Implementing automatic functional dependency detection from raw tabular data required building a custom algorithm from scratch in Python — no library handles this directly.',
-        'Ensuring lossless join and dependency preservation during 3NF decomposition involved complex set theory logic that had to be verified against multiple edge-case datasets.',
-        'Rendering interactive ER diagrams dynamically required generating Graphviz SVG output on the Flask backend and passing it cleanly to the React frontend without rendering artifacts.',
-        'Building the drag-and-drop workflow UI with connected flow lines between blocks required custom positioning logic since no off-the-shelf library matched the required design.',
-    ],
-    improvements: [
-        'Add BCNF and 4NF decomposition stages beyond 3NF.',
-        'Allow users to export the final normalized schema directly as SQL CREATE TABLE statements.',
-        'Support JSON and XML as additional input formats alongside CSV and Excel.',
-        'Add a collaborative mode so multiple users can work on the same schema simultaneously.',
-    ]
-}

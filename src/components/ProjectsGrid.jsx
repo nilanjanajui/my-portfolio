@@ -5,7 +5,7 @@ import AnimatedSection from './AnimatedSection'
 
 const ALL_TAGS = ['All', ...new Set(projects.map(p => p.tag))]
 
-export default function ProjectsGrid() {
+export default function ProjectsGrid({ limit, showViewMore, title = 'Other Work' }) {
   const navigate = useNavigate()
   const [activeTag, setActiveTag] = useState('All')
 
@@ -13,13 +13,15 @@ export default function ProjectsGrid() {
     ? projects
     : projects.filter(p => p.tag === activeTag)
 
+  const displayedProjects = limit ? filtered.slice(0, limit) : filtered;
+
   return (
     <section className="py-16 sm:py-24 lg:py-32 bg-secondary px-4 sm:px-6" id="projects">
       <div className="max-w-7xl mx-auto">
 
         <AnimatedSection direction="up">
           <div className="flex flex-col mb-10 sm:mb-14">
-            <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4 text-light-bg">Other Work</h2>
+            <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4 text-light-bg">{title}</h2>
             <div className="h-1.5 w-24 bg-accent rounded-full"></div>
           </div>
         </AnimatedSection>
@@ -31,11 +33,10 @@ export default function ProjectsGrid() {
               <button
                 key={tag}
                 onClick={() => setActiveTag(tag)}
-                className={`px-5 py-2 rounded-full text-sm font-bold transition-all border ${
-                  activeTag === tag
+                className={`px-5 py-2 rounded-full text-sm font-bold transition-all border ${activeTag === tag
                     ? 'bg-accent text-white border-accent shadow-lg shadow-accent/20'
                     : 'bg-white/5 backdrop-blur-md text-text-dim border-white/8 hover:border-accent/50 hover:text-light-bg hover:bg-white/10'
-                }`}
+                  }`}
               >
                 {tag}
               </button>
@@ -44,7 +45,7 @@ export default function ProjectsGrid() {
         </AnimatedSection>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
-          {filtered.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <AnimatedSection key={project.title} direction="up" delay={index * 150}>
               <div className="group flex flex-col bg-primary/30 backdrop-blur-md rounded-xl border border-white/8 overflow-hidden hover:shadow-2xl hover:shadow-accent/10 hover:border-accent/40 hover:-translate-y-2 transition-all duration-300 h-full relative">
 
@@ -128,6 +129,26 @@ export default function ProjectsGrid() {
             </AnimatedSection>
           ))}
         </div>
+
+        {showViewMore && (
+          <AnimatedSection direction="up" delay={200}>
+            <div className="mt-12 sm:mt-16 flex justify-center">
+              <button
+                onClick={() => navigate('/all-projects')}
+                className="
+                  inline-flex items-center gap-2
+                  bg-accent hover:bg-accent-hover text-white
+                  px-8 py-4 rounded-xl font-bold
+                  transition-all shadow-lg shadow-accent/20
+                  transform hover:-translate-y-1
+                "
+              >
+                View More Projects
+                <span className="material-symbols-outlined text-xl">arrow_forward</span>
+              </button>
+            </div>
+          </AnimatedSection>
+        )}
 
       </div>
     </section>

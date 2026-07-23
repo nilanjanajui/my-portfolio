@@ -1,7 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Header from "./components/Header"
 import Hero from "./components/Hero"
-import FeaturedProject from "./components/FeaturedProject"
 import ProjectsGrid from "./components/ProjectsGrid"
 import GitHubActivity from './components/GitHubActivity'
 import Skills from "./components/Skills"
@@ -11,6 +10,7 @@ import Education from "./components/Education"
 import HowIBuild from "./components/HowIBuild"
 import Contact from "./components/Contact"
 import ProjectDetail from "./components/ProjectDetail"
+import AllProjects from "./components/AllProjects"
 import { Toaster } from 'react-hot-toast'
 
 export default function App() {
@@ -46,8 +46,7 @@ export default function App() {
           <Route path="/" element={
             <main className="grow">
               <Hero />
-              <FeaturedProject />
-              <ProjectsGrid />
+              <ProjectsGrid limit={4} showViewMore={true} title="Featured Projects" />
               <GitHubActivity />
               <Skills />
               <About />
@@ -58,6 +57,7 @@ export default function App() {
             </main>
           } />
           <Route path="/projects/:id" element={<ProjectDetail />} />
+          <Route path="/all-projects" element={<AllProjects />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>

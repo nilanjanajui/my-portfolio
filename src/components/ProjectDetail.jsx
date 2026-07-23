@@ -1,13 +1,12 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
-import { projects, featuredProject } from '../data/projects'
+import { projects } from '../data/projects'
 
 export default function ProjectDetail() {
     const { id } = useParams()
     const navigate = useNavigate()
 
-    const allProjects = [...projects, featuredProject]
-    const project = allProjects.find(p => p.id === id)
+    const project = projects.find(p => p.id === id)
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -34,12 +33,20 @@ export default function ProjectDetail() {
                 {/* Back Button */}
                 <button
                     onClick={() => navigate('/')}
-                    className="flex items-center gap-2 text-text-dim hover:text-accent transition-colors mb-12 group"
+                    className="
+                      inline-flex items-center gap-2 mb-10
+                      bg-white/5 backdrop-blur-md
+                      border border-white/12
+                      text-light-bg px-5 py-2.5 rounded-xl
+                      font-bold text-sm
+                      hover:bg-white/10 hover:border-white/20 hover:-translate-x-1
+                      shadow-lg shadow-black/20
+                      transition-all duration-300
+                      w-fit
+                    "
                 >
-                    <span className="material-symbols-outlined group-hover:-translate-x-1 transition-transform">
-                        arrow_back
-                    </span>
-                    <span className="font-bold text-sm">Back to Portfolio</span>
+                    <span className="material-symbols-outlined text-base">arrow_back</span>
+                    Back to Portfolio
                 </button>
 
                 {/* Header */}

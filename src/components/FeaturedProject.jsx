@@ -92,7 +92,7 @@ export default function FeaturedProject() {
                 with lossless join and dependency preservation checks. Visualize your schema as an interactive{' '}
                 <span className="text-light-bg font-bold">ER diagram</span> with PK/FK detection, and explore
                 each normalization step through a <span className="text-light-bg font-bold">drag-and-drop
-                workflow UI</span> with live backend code and execution logs.
+                  workflow UI</span> with live backend code and execution logs.
               </p>
 
               {/* Tech tags — glass pills */}
