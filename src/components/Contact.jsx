@@ -1,6 +1,7 @@
 import AnimatedSection from './AnimatedSection'
 import { useRef } from 'react'
 import toast from 'react-hot-toast'
+import { Mail, Phone, MessageCircle, Linkedin, Github, Facebook, Twitter } from 'lucide-react'
 
 export default function Contact() {
   const form = useRef()
@@ -64,13 +65,13 @@ export default function Contact() {
 
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 lg:gap-8 mb-12 sm:mb-20 w-full sm:w-auto">
               {[
-                { icon: 'mail', label: 'Email', href: 'mailto:nilanjana.csecu@gmail.com' },
-                { icon: 'call', label: 'Phone', href: 'tel:+8801794437893' },
-                { icon: 'chat', label: 'WhatsApp', href: 'https://wa.me/8801794437893' },
-                { icon: 'share', label: 'LinkedIn', href: 'https://www.linkedin.com/in/nilanjana-jui-759402286/' },
-                { icon: 'terminal', label: 'GitHub', href: 'https://github.com/nilanjanajui' },
-                { icon: 'facebook', label: 'Facebook', href: 'https://facebook.com/yourprofile' },
-                { icon: 'alternate_email', label: 'Twitter', href: 'https://twitter.com/yourprofile' },
+                { icon: <Mail className="w-5 h-5 sm:w-6 sm:h-6" />, label: 'Email', href: 'mailto:nilanjana.csecu@gmail.com' },
+                { icon: <Phone className="w-5 h-5 sm:w-6 sm:h-6" />, label: 'Phone', href: 'tel:+8801794437893' },
+                { icon: <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />, label: 'WhatsApp', href: 'https://wa.me/8801794437893' },
+                { icon: <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/nilanjana-jui-759402286/' },
+                { icon: <Github className="w-5 h-5 sm:w-6 sm:h-6" />, label: 'GitHub', href: 'https://github.com/nilanjanajui' },
+                { icon: <Facebook className="w-5 h-5 sm:w-6 sm:h-6" />, label: 'Facebook', href: 'https://facebook.com/yourprofile' },
+                { icon: <Twitter className="w-5 h-5 sm:w-6 sm:h-6" />, label: 'Twitter', href: 'https://twitter.com/yourprofile' },
               ].map((link, index) => (
                 <AnimatedSection key={link.label} direction="up" delay={index * 150}>
                   <a
@@ -79,7 +80,7 @@ export default function Contact() {
                     rel="noreferrer"
                     className="flex items-center justify-center gap-2 sm:gap-3 bg-white/5 px-5 sm:px-8 py-3 sm:py-4 rounded-xl border border-white/10 text-light-bg hover:bg-white/10 hover:-translate-y-1 transition-all group text-sm sm:text-base"
                   >
-                    <span className="material-symbols-outlined text-accent group-hover:scale-110 transition-transform text-base sm:text-xl">
+                    <span className="text-accent group-hover:scale-110 transition-transform flex items-center justify-center">
                       {link.icon}
                     </span>
                     <span className="font-bold">{link.label}</span>
