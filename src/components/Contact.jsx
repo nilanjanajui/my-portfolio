@@ -65,6 +65,8 @@ export default function Contact() {
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 lg:gap-8 mb-12 sm:mb-20 w-full sm:w-auto">
               {[
                 { icon: 'mail', label: 'Email', href: 'mailto:nilanjana.csecu@gmail.com' },
+                { icon: 'call', label: 'Phone', href: 'tel:+8801794437893' },
+                { icon: 'chat', label: 'WhatsApp', href: 'https://wa.me/8801794437893' },
                 { icon: 'share', label: 'LinkedIn', href: 'https://www.linkedin.com/in/nilanjana-jui-759402286/' },
                 { icon: 'terminal', label: 'GitHub', href: 'https://github.com/nilanjanajui' },
               ].map((link, index) => (
