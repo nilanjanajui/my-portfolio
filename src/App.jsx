@@ -13,6 +13,7 @@ import ProjectDetail from "./components/ProjectDetail"
 import AllProjects from "./components/AllProjects"
 import CustomCursor from "./components/CustomCursor"
 import InteractiveBackground from "./components/InteractiveBackground"
+import ScrollToTop from "./components/ScrollToTop"
 import { Toaster } from 'react-hot-toast'
 
 export default function App() {
@@ -51,6 +52,7 @@ export default function App() {
               <Education />
               <HowIBuild />
               <Contact />
+              <ScrollToTop />
             </main>
           } />
           <Route path="/projects/:id" element={<ProjectDetail />} />
