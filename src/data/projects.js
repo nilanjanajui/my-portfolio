@@ -8,8 +8,72 @@ import driveFleetImg from '../assets/drivefleet.webp'
 import urbanNestImg from '../assets/urbannest.webp'
 import rescueLinkImg from '../assets/rescuelink.webp'
 import databaseDesignStudioImg from '../assets/database-design-studio.png'
+import careerOSImg from '../assets/careeros.webp'
 
 export const projects = [
+
+    {
+        id: 'careeros',
+        title: 'CareerOS',
+        tag: 'Full Stack',
+        description: 'A production-grade career management platform for job seekers and professionals — AI-inferred regional job search, profile management, and a modern analytics dashboard.',
+        highlight: 'Next.js 16 App Router, React 19, AI-inferred job search via Adzuna integration, JWT-secured API, and Recharts-powered dashboard with staggered loading animations.',
+        image: careerOSImg,
+        link: 'https://careeros-client.vercel.app', // confirm actual URL
+        github: 'https://github.com/nilanjanajui/careeros-client',
+        techStack: ['Next.js 16', 'React 19', 'Tailwind CSS v4', 'Zustand', 'React Query', 'Framer Motion', 'Recharts', 'React Hook Form', 'Zod'],
+        features: [
+            'Email/password + Google OAuth authentication with a JWT-secured API layer and protected routes',
+            'AI-inferred regional job search engine integrated with the Adzuna API, surfaced via interactive job cards',
+            'Responsive profile editor for managing user details',
+            'Modern dashboard with Recharts visualizations and staggered loading animations',
+            'Global route transitions and micro-interactions via Framer Motion, mobile-first premium SaaS aesthetic',
+        ],
+        challenges: [
+            'Structuring AI-inferred job search results from Adzuna into a consistent, normalized card format across regions.',
+            'Coordinating JWT-secured sessions between the Next.js client and a separately deployed API server.',
+            'Building staggered dashboard loading animations that stay smooth across Recharts re-renders.',
+        ],
+        improvements: [
+            'Add saved searches and job alert notifications.',
+            'Expand analytics with application-tracking history over time.',
+            'Add resume/CV builder integrated with profile data.',
+        ],
+    },
+
+    {
+        id: 'rescuelink',
+        title: 'RescueLink',
+        tag: 'Full Stack',
+        description: 'A disaster relief coordination platform that connects volunteers with active relief missions — mission discovery, volunteer sign-ups, and role-based dashboards for users and admins.',
+        highlight: 'Better Auth with Google OAuth and demo login, JWT-secured Express API with role-based middleware, AI-powered mission recommendations (Groq + Adzuna), and a searchable/filterable mission explorer.',
+        image: rescueLinkImg,
+        link: 'https://rescuelink-client.vercel.app',
+        github: 'https://github.com/nilanjanajui/rescuelink-client',
+        techStack: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'Better Auth', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT (jose)', 'Groq SDK'],
+        features: [
+            'Explore missions with search, filtering by disaster type / urgency / status, sorting, pagination, and skeleton loaders',
+            'Mission details with image gallery, live recruitment progress, and an updates feed',
+            'Email/password and Google OAuth authentication, plus instant demo login for user and admin roles',
+            'Role-based access for User, Admin, and browse-only Tenant accounts, gated server-side in protected layouts',
+            'Dashboard showing posted missions, joined missions, and platform-wide stats for admins',
+            'AI Recommendation Engine on the dashboard: Groq AI (llama-3.3-70b-versatile) scores volunteer-to-mission match (0–100%) against internal MongoDB missions plus external Adzuna listings, with a keyword/skill-overlap fallback if the AI call or API keys fail',
+            'Add Mission and Manage Missions flows with resolve/reopen/delete actions and an admin scope toggle',
+            'Express API with verifyJWT and requireRole middleware, plus MongoDB-backed stats, testimonials, and contact/newsletter endpoints',
+        ],
+        challenges: [
+            'Building server-side route protection in the Next.js App Router so unauthenticated visitors are redirected before protected pages render.',
+            'Designing a role model with three tiers (user, admin, browse-only tenant) enforced consistently across both client routing and API middleware.',
+            'Seeding realistic demo data where mission posters are linked by email to org accounts created by a separate auth-seeding script.',
+            'Coordinating a JWT-based session between a Next.js client and an independently deployed Express/TypeScript API.',
+            'Building a resilient AI recommendation pipeline that degrades gracefully to heuristic matching when Groq or Adzuna are unavailable, rather than failing the dashboard.',
+        ],
+        improvements: [
+            'Add real-time updates to the mission feed as volunteer counts and statuses change.',
+            'Add push or email notifications when a joined mission posts a new update.',
+            'Add geolocation-based mission discovery to surface nearby relief efforts first.',
+        ],
+    },
 
     {
         id: 'urbannest',
@@ -40,37 +104,6 @@ export const projects = [
             'Add real-time notifications for booking status changes and admin decisions.',
             'Add in-app messaging between tenants and owners.',
             'Expand analytics with exportable reports for owners and admins.',
-        ],
-    },
-    {
-        id: 'rescuelink',
-        title: 'RescueLink',
-        tag: 'Full Stack',
-        description: 'A disaster relief coordination platform that connects volunteers with active relief missions — mission discovery, volunteer sign-ups, and role-based dashboards for users and admins.',
-        highlight: 'Better Auth with Google OAuth and demo login, JWT-secured Express API with role-based middleware, and searchable/filterable mission explorer.',
-        image: rescueLinkImg,
-        link: 'https://rescuelink-client.vercel.app',
-        github: 'https://github.com/nilanjanajui/rescuelink-client',
-        techStack: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'Better Auth', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT (jose)'],
-        features: [
-            'Explore missions with search, filtering by disaster type / urgency / status, sorting, pagination, and skeleton loaders',
-            'Mission details with image gallery, live recruitment progress, and an updates feed',
-            'Email/password and Google OAuth authentication, plus instant demo login for user and admin roles',
-            'Role-based access for User, Admin, and browse-only Tenant accounts, gated server-side in protected layouts',
-            'Dashboard showing posted missions, joined missions, and platform-wide stats for admins',
-            'Add Mission and Manage Missions flows with resolve/reopen/delete actions and an admin scope toggle',
-            'Express API with verifyJWT and requireRole middleware, plus MongoDB-backed stats, testimonials, and contact/newsletter endpoints',
-        ],
-        challenges: [
-            'Building server-side route protection in the Next.js App Router so unauthenticated visitors are redirected before protected pages render.',
-            'Designing a role model with three tiers (user, admin, browse-only tenant) enforced consistently across both client routing and API middleware.',
-            'Seeding realistic demo data where mission posters are linked by email to org accounts created by a separate auth-seeding script.',
-            'Coordinating a JWT-based session between a Next.js client and an independently deployed Express/TypeScript API.',
-        ],
-        improvements: [
-            'Add real-time updates to the mission feed as volunteer counts and statuses change.',
-            'Add push or email notifications when a joined mission posts a new update.',
-            'Add geolocation-based mission discovery to surface nearby relief efforts first.',
         ],
     },
 
@@ -330,4 +363,3 @@ export const projects = [
         ],
     },
 ]
-

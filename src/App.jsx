@@ -44,7 +44,7 @@ export default function App() {
           <Route path="/" element={
             <main className="grow">
               <Hero />
-              <ProjectsGrid limit={4} showViewMore={true} title="Featured Projects" />
+              <ProjectsGrid limit={5} showViewMore={true} title="Featured Projects" />
               <GitHubActivity />
               <Skills />
               <About />
