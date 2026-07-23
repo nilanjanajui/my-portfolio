@@ -83,7 +83,7 @@ export default function Header() {
             {/* Resume button */}
             <a
               href={resumePDF}
-              download
+              download="Nilanjana_Das_Jui_Resume.pdf"
               className="bg-accent hover:bg-accent-hover text-white px-4 md:px-6 py-2 md:py-2.5 rounded-xl text-sm font-bold transition-all flex items-center gap-1.5 md:gap-2 transform hover:-translate-y-0.5 shadow-lg shadow-accent/20"
             >
               <span className="material-symbols-outlined text-sm">download</span>

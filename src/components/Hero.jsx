@@ -90,8 +90,8 @@ export default function Hero() {
             </div>
 
             {/* H1 — tagline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-tight tracking-tight text-light-bg">
-              I build{' '}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-light-bg flex flex-col sm:gap-2">
+              <span>I build</span>
               <TypeAnimation
                 sequence={[
                   'clean UI.', 2000,
@@ -106,10 +106,35 @@ export default function Hero() {
               />
             </h1>
 
-            <p className="text-base sm:text-lg lg:text-xl text-text-dim max-w-xl mx-auto lg:mx-0">
-              I design and develop responsive, user-friendly web applications - combining frontend finesse,
-              backend structure, and database expertise to build systems that last.
-            </p>
+            <div className="w-full max-w-xl mx-auto lg:mx-0 bg-primary/80 backdrop-blur-xl rounded-xl overflow-hidden border border-white/10 shadow-2xl mt-2 mb-4">
+              {/* Terminal Header */}
+              <div className="flex items-center px-4 py-2 bg-white/5 border-b border-white/10">
+                <div className="flex gap-1.5">
+                  <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                </div>
+                <span className="ml-4 text-[10px] sm:text-xs font-mono text-text-dim/70">guest@nilanjana: ~</span>
+              </div>
+              {/* Terminal Body */}
+              <div className="p-4 sm:p-5 font-mono text-xs sm:text-sm text-left min-h-[140px] sm:min-h-[160px]">
+                <div className="font-bold mb-2">
+                  <span className="text-green-400">➜</span> <span className="text-blue-400">~</span> <span className="text-light-bg">npx run nilanjana --info</span>
+                </div>
+                <div className="text-text-dim leading-relaxed">
+                  <TypeAnimation
+                    sequence={[
+                      500,
+                      '> Loading developer profile...\n> Skills: [React, Node.js, Flask, MongoDB]\n> Passion: Building scalable web applications.\n> Status: Open to opportunities.',
+                    ]}
+                    wrapper="div"
+                    speed={65}
+                    cursor={true}
+                    className="whitespace-pre-line"
+                  />
+                </div>
+              </div>
+            </div>
 
             <div className="flex flex-wrap gap-4 sm:gap-5 justify-center lg:justify-start">
               {/* Primary CTA — stays solid accent, unchanged */}
