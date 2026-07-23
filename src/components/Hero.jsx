@@ -1,6 +1,7 @@
 import profileImg from '../assets/profile.webp'
 import AnimatedSection from './AnimatedSection'
 import { TypeAnimation } from 'react-type-animation'
+import resumePDF from '../assets/resume.pdf'
 
 export default function Hero() {
   return (
@@ -161,6 +162,49 @@ export default function Hero() {
               >
                 <span className="material-symbols-outlined text-base sm:text-lg">person</span>
                 LinkedIn
+              </a>
+
+              {/* View Resume — glass button */}
+              <a
+                href={resumePDF}
+                target="_blank"
+                rel="noreferrer"
+                className="
+                  px-7 sm:px-10 py-4 sm:py-5 rounded-xl
+                  bg-white/5 backdrop-blur-md
+                  border border-white/12
+                  text-light-bg font-bold
+                  flex items-center gap-2
+                  shadow-lg shadow-black/20
+                  hover:bg-white/10 hover:border-white/20
+                  transform hover:-translate-y-1
+                  transition-all duration-300
+                  text-sm sm:text-base
+                "
+              >
+                <span className="material-symbols-outlined text-base sm:text-lg">visibility</span>
+                View Resume
+              </a>
+
+              {/* Download Resume — glass button */}
+              <a
+                href={resumePDF}
+                download
+                className="
+                  px-7 sm:px-10 py-4 sm:py-5 rounded-xl
+                  bg-white/5 backdrop-blur-md
+                  border border-white/12
+                  text-light-bg font-bold
+                  flex items-center gap-2
+                  shadow-lg shadow-black/20
+                  hover:bg-white/10 hover:border-white/20
+                  transform hover:-translate-y-1
+                  transition-all duration-300
+                  text-sm sm:text-base
+                "
+              >
+                <span className="material-symbols-outlined text-base sm:text-lg">download</span>
+                Download Resume
               </a>
             </div>
 
