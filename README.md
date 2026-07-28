@@ -115,5 +115,3 @@ Feel free to explore the live site, check out the projects, and reach out if you
 ---
 
 ⭐ If you like this portfolio, feel free to star the repo and check out the projects!
-
-
