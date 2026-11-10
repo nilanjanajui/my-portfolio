@@ -37,8 +37,8 @@ const building = [
     {
         name: "Jarvis",
         tagline: "AI Voice Assistant",
-        desc: "Speak a prompt, hear an intelligent response. Built with Groq LLaMA for inference, ElevenLabs for natural TTS, Next.js for the frontend, and Flask for the backend pipeline.",
-        stack: ["Next.js", "Groq LLaMA", "ElevenLabs TTS", "Flask", "Python"],
+        desc: "Speak a prompt, hear an intelligent response. Built with Groq GPT-OSS for inference, ElevenLabs for natural TTS, Next.js API routes, and an optional Flask local daemon.",
+        stack: ["Next.js", "Groq GPT-OSS", "ElevenLabs TTS", "Three.js", "Flask", "Python"],
         status: "In Development",
         icon: "mic",
         github: "https://github.com/nilanjanajui/jarvis",
