@@ -40,7 +40,7 @@ export default function Education() {
                                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
                                     <div>
                                         <h3 className="text-xl font-black text-light-bg">{edu.degree}</h3>
-                                        <p className="text-accent font-bold text-sm mt-1">{edu.institution}</p>
+                                        <p className="text-accent-text font-bold text-sm mt-1">{edu.institution}</p>
                                     </div>
                                     <span className="text-text-dim text-sm font-bold bg-secondary px-4 py-1.5 rounded-full border border-white/5 whitespace-nowrap w-fit">
                                         {edu.period}

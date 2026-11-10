@@ -9,6 +9,7 @@ import urbanNestImg from '../assets/urbannest.webp'
 import rescueLinkImg from '../assets/rescuelink.webp'
 import databaseDesignStudioImg from '../assets/database-design-studio.webp'
 import careerOSImg from '../assets/careeros.webp'
+import jarvisImg from '../assets/jarvis.webp'
 
 export const projects = [
 
@@ -182,6 +183,46 @@ export const projects = [
             'Add real-time vehicle availability updates and booking conflict prevention.',
             'Implement user reviews and ratings for cars and drivers.',
             'Add an admin dashboard with analytics, moderation tools, and fleet management insights.',
+        ],
+    },
+
+    {
+        id: 'jarvis',
+        title: 'J.A.R.V.I.S.',
+        tag: 'Full Stack',
+        description: 'An Iron Man-inspired AI voice assistant and spatial HUD featuring real-time speech interaction, live 3D Arc Reactor visualization, and an optional local Python desktop IPC daemon. The hosted demo uses simulated host telemetry unless the local daemon runs.',
+        highlight: 'Groq GPT-OSS with automated fallback, ElevenLabs TTS with browser voice fallback, Three.js 3D particle sphere, 14 tool functions, and a hardened Python desktop daemon.',
+        image: jarvisImg,
+        link: 'https://jarvis-theta-indol.vercel.app',
+        github: 'https://github.com/nilanjanajui/jarvis',
+        techStack: [
+            'Next.js 16',
+            'React 19',
+            'Three.js',
+            'Framer Motion',
+            'Groq SDK',
+            'Tailwind CSS v4',
+            'Python',
+            'Flask',
+            'psutil',
+            'WebSockets',
+        ],
+        features: [
+            'Voice-first and text interaction powered by Groq LLM inference (openai/gpt-oss-120b with gpt-oss-20b fallback) and ElevenLabs multilingual TTS with browser speech fallback',
+            'Interactive 3D spatial HUD built with Three.js WebGL particle sphere, audio-reactive reactor ring visualizer, and HRTF 3D spatial directional audio',
+            'Orchestration of 14 tool functions including web search, live weather, Wikipedia lookup, calculations, timers, reminders, app launching, and system commands',
+            'Customizable HUD theme engine with 4 color presets (Cyan, Amber, Green, Violet), high-contrast readability mode, and draggable panels',
+            'Security-hardened architecture with API rate limiting, Origin and Host validation, shell command allowlisting, safe URL navigation, and strict loopback binding',
+        ],
+        challenges: [
+            'Hosted demo fallback: Deployed cloud environments cannot reach a user\'s localhost daemon, resolved by detecting non-localhost hosts to gracefully supply random-walk simulated telemetry and mock desktop notifications.',
+            'Local IPC security: Exposing desktop control endpoints risks DNS rebinding and cross-origin abuse, solved by binding strictly to 127.0.0.1 and validating Host and Origin headers before processing commands.',
+            'LLM endpoint resilience: Handling rate limits and model deprecations without breaking the user experience, addressed by implementing automated multi-model fallback across Groq endpoints.',
+        ],
+        improvements: [
+            'Verify and expand Groq model endpoints against current API availability.',
+            'Add configurable multi-origin support via environment configuration for local agent connectivity.',
+            'Expand cross-browser speech recognition support for browsers lacking native Web Speech API.',
         ],
     },
 

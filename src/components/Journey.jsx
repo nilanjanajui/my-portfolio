@@ -29,28 +29,7 @@ const milestones = [
     {
         year: "2026",
         title: "Into AI & What's Next",
-        desc: "Integrating LLMs and voice synthesis into applications: Jarvis voice assistant with Groq LLaMA and ElevenLabs TTS, and DevMatch collaboration platform, backed by strong algorithmic foundations."
-    },
-]
-
-const building = [
-    {
-        name: "Jarvis",
-        tagline: "AI Voice Assistant",
-        desc: "Speak a prompt, hear an intelligent response. Built with Groq LLaMA for inference, ElevenLabs for natural TTS, Next.js for the frontend, and Flask for the backend pipeline.",
-        stack: ["Next.js", "Groq LLaMA", "ElevenLabs TTS", "Flask", "Python"],
-        status: "In Development",
-        icon: "mic",
-        github: "https://github.com/nilanjanajui/jarvis",
-    },
-    {
-        name: "DevMatch",
-        tagline: "Developer Collaboration Platform",
-        desc: "A platform for developers to find collaborators, post project ideas, and build together. Full authentication, paginated feeds, and real-time updates.",
-        stack: ["Next.js", "Express", "MongoDB", "Better Auth", "React Query", "Tailwind v4"],
-        status: "In Development",
-        icon: "group",
-        github: "https://github.com/nilanjanajui/devmatch-client",
+        desc: "Integrating LLMs and voice synthesis into applications with Jarvis, combining Groq-hosted GPT-OSS and ElevenLabs TTS with strong algorithmic foundations."
     },
 ]
 
@@ -73,7 +52,7 @@ export default function Journey() {
                 </AnimatedSection>
 
                 {/* ── Timeline ── */}
-                <div className="relative border-l-2 border-white/10 pl-6 sm:pl-10 ml-2 sm:ml-4 space-y-10 sm:space-y-12 mb-20 sm:mb-28">
+                <div className="relative border-l-2 border-white/10 pl-6 sm:pl-10 ml-2 sm:ml-4 space-y-10 sm:space-y-12 mb-0">
                     {milestones.map((m, index) => (
                         <AnimatedSection key={index} direction="up" delay={index * 100}>
                             <div className="relative">
@@ -93,90 +72,6 @@ export default function Journey() {
                                         {m.desc}
                                     </p>
                                 </div>
-                            </div>
-                        </AnimatedSection>
-                    ))}
-                </div>
-
-                {/* ── Currently Building ── */}
-                <AnimatedSection direction="up">
-                    <div className="flex flex-col mb-10 sm:mb-14">
-                        <h3 className="text-2xl sm:text-3xl font-black text-light-bg mb-4">
-                            Currently Building
-                        </h3>
-                        <div className="h-1 w-16 bg-accent rounded-full mb-4" />
-                        <p className="text-text-dim text-base font-medium max-w-xl">
-                            Two projects in active development - not on a tutorial, not on a course.
-                        </p>
-                    </div>
-                </AnimatedSection>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                    {building.map((project, index) => (
-                        <AnimatedSection key={index} direction="up" delay={index * 150}>
-                            <div className="
-                relative flex flex-col gap-4 p-6 sm:p-8 rounded-2xl overflow-hidden h-full
-                bg-secondary/40 backdrop-blur-md
-                border border-white/8
-                shadow-lg shadow-black/20
-                hover:border-accent/25 hover:bg-secondary/60
-                transition-all duration-300 group
-              ">
-                                {/* Top shine */}
-                                <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
-
-                                {/* Header row */}
-                                <div className="flex items-start justify-between gap-3">
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0">
-                                            <span className="material-symbols-outlined text-accent text-xl">
-                                                {project.icon}
-                                            </span>
-                                        </div>
-                                        <div>
-                                            <h4 className="text-lg sm:text-xl font-black text-light-bg leading-tight">
-                                                {project.name}
-                                            </h4>
-                                            <p className="text-text-dim text-xs font-bold tracking-wide uppercase">
-                                                {project.tagline}
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    {/* Status badge */}
-                                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 font-bold text-xs shrink-0">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse" />
-                                        {project.status}
-                                    </span>
-                                </div>
-
-                                {/* Description */}
-                                <p className="text-text-dim text-sm sm:text-base leading-relaxed font-medium">
-                                    {project.desc}
-                                </p>
-
-                                {/* Stack pills */}
-                                <div className="flex flex-wrap gap-2 mt-auto pt-2">
-                                    {project.stack.map((tech) => (
-                                        <span
-                                            key={tech}
-                                            className="px-2.5 py-1 rounded-lg bg-white/5 border border-white/8 text-text-dim text-xs font-bold"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
-
-                                {/* GitHub link */}
-                                <a
-                                    href={project.github}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="inline-flex items-center gap-2 text-accent-text text-sm font-bold hover:underline underline-offset-4 mt-1 w-fit"
-                                >
-                                    <span className="material-symbols-outlined text-base">code</span>
-                                    View on GitHub
-                                </a>
                             </div>
                         </AnimatedSection>
                     ))}
