@@ -96,7 +96,7 @@ export default function ProjectsGrid({ limit, showViewMore, title = 'Other Work'
                   {/* Tech stack chips */}
                   <div className="flex flex-wrap gap-1.5 mb-4">
                     {project.techStack?.slice(0, 4).map(tech => (
-                      <span key={tech} className="text-[10px] font-bold bg-accent/20 backdrop-blur-sm text-accent px-2 py-0.5 rounded-full border border-accent/20">
+                      <span key={tech} className="text-[10px] font-bold bg-accent/20 backdrop-blur-sm text-accent-text px-2 py-0.5 rounded-full border border-accent/20">
                         {tech}
                       </span>
                     ))}
@@ -120,7 +120,7 @@ export default function ProjectsGrid({ limit, showViewMore, title = 'Other Work'
                     <div className="flex items-center gap-3">
                       {project.link && (
                         <a href={project.link} target="_blank" rel="noreferrer"
-                          className="text-text-dim hover:text-accent transition-colors text-sm font-bold flex items-center gap-1">
+                          className="text-text-dim hover:text-accent-text transition-colors text-sm font-bold flex items-center gap-1">
                           Demo
                           <span className="material-symbols-outlined text-sm">open_in_new</span>
                         </a>

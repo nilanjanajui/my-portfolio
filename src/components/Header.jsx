@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 
-import resumePDF from "../assets/resume.pdf";
+const resumePDF = '/Nilanjana_Das_Jui_Resume.pdf'
 
 const NAV_ITEMS = ['home', 'projects', 'skills', 'about', 'journey', 'education', 'contact']
 
@@ -94,6 +94,8 @@ export default function Header() {
             <button
               className="md:hidden text-light-bg p-1"
               onClick={() => setMenuOpen(!menuOpen)}
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={menuOpen}
             >
               <span className="material-symbols-outlined text-2xl">
                 {menuOpen ? 'close' : 'menu'}
@@ -113,7 +115,7 @@ export default function Header() {
               href={`#${item}`}
               onClick={(e) => handleNavClick(e, item)}
               className={`px-4 py-2.5 rounded-xl text-sm font-semibold capitalize transition-all ${activeSection === item
-                ? 'text-accent bg-accent/15 border border-accent/25 backdrop-blur-sm'
+                ? 'text-accent-text bg-accent/15 border border-accent/25 backdrop-blur-sm'
                 : 'text-text-dim hover:text-light-bg hover:bg-white/8 border border-transparent'
                 }`}
             >
@@ -123,7 +125,7 @@ export default function Header() {
 
           <a
             href={resumePDF}
-            download
+            download="Nilanjana_Das_Jui_Resume.pdf"
             className="mt-2 flex items-center justify-center gap-2 bg-white/5 backdrop-blur-sm border border-white/15 text-light-bg px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-white/10 transition-all"
           >
             <span className="material-symbols-outlined text-sm">download</span>

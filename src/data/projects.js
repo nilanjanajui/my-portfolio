@@ -7,7 +7,7 @@ import wizardImg from '../assets/wizard.webp'
 import driveFleetImg from '../assets/drivefleet.webp'
 import urbanNestImg from '../assets/urbannest.webp'
 import rescueLinkImg from '../assets/rescuelink.webp'
-import databaseDesignStudioImg from '../assets/database-design-studio.png'
+import databaseDesignStudioImg from '../assets/database-design-studio.webp'
 import careerOSImg from '../assets/careeros.webp'
 
 export const projects = [

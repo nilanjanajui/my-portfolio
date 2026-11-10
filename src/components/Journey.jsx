@@ -82,7 +82,7 @@ export default function Journey() {
                                 <div className="absolute -left-8.75 sm:-left-12.75 top-1 w-5 h-5 sm:w-6 sm:h-6 rounded-xl bg-accent border-4 border-primary shadow-lg shadow-accent/30" />
 
                                 <div className="flex flex-col gap-2">
-                                    <span className="inline-flex items-center gap-1.5 w-fit px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent font-bold text-xs tracking-widest uppercase">
+                                    <span className="inline-flex items-center gap-1.5 w-fit px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent-text font-bold text-xs tracking-widest uppercase">
                                         <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                                         {m.year}
                                     </span>
@@ -172,7 +172,7 @@ export default function Journey() {
                                     href={project.github}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="inline-flex items-center gap-2 text-accent text-sm font-bold hover:underline underline-offset-4 mt-1 w-fit"
+                                    className="inline-flex items-center gap-2 text-accent-text text-sm font-bold hover:underline underline-offset-4 mt-1 w-fit"
                                 >
                                     <span className="material-symbols-outlined text-base">code</span>
                                     View on GitHub

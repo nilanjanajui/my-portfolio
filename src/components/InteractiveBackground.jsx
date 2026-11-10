@@ -5,7 +5,10 @@ export default function InteractiveBackground() {
 
   useEffect(() => {
     // Only animate on desktop devices to save battery/performance on mobile
-    if (window.matchMedia("(pointer: coarse)").matches) return;
+    if (
+      window.matchMedia("(pointer: coarse)").matches ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) return;
 
     const handleMouseMove = (e) => {
       // Calculate deviation from the center of the screen

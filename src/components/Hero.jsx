@@ -1,7 +1,7 @@
 import profileImg from '../assets/profile.webp'
 import AnimatedSection from './AnimatedSection'
 import { TypeAnimation } from 'react-type-animation'
-import resumePDF from '../assets/resume.pdf'
+const resumePDF = '/Nilanjana_Das_Jui_Resume.pdf'
 
 export default function Hero() {
   return (
@@ -59,7 +59,7 @@ export default function Hero() {
               <div className="text-center lg:text-left mt-6">
                 <span className="text-lg sm:text-xl font-bold text-light-bg">Hi, I'm</span>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-light-bg">
-                  <span className="text-accent">Nilanjana</span> Das <span className="text-accent">Jui</span>
+                  <span className="text-accent-text">Nilanjana</span> Das <span className="text-accent-text">Jui</span>
                 </h1>
               </div>
             </AnimatedSection>

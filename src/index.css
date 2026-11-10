@@ -5,6 +5,7 @@
   --color-secondary: #44444E;
   --color-accent: #715A5A;
   --color-accent-hover: #5F4B4B;
+  --color-accent-text: #CDA9A9;
   --color-light-bg: #D3DAD9;
   --color-text-dim: #A0A8A7;
 
@@ -60,10 +61,7 @@ h4 {
 }
 
 .hero-gradient {
-  background: linear-gradient(rgba(55, 53, 62, 0.85), rgba(55, 53, 62, 0.98)),
-    url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80');
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(rgba(55, 53, 62, 0.85), rgba(55, 53, 62, 0.98));
 }
 
 @keyframes fadeInUp {

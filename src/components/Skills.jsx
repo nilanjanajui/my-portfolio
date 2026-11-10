@@ -143,7 +143,7 @@ export default function Skills() {
                           style={darkLogos.includes(tag.name) ? { filter: 'invert(1) brightness(0.8)' } : {}}
                         />
                       </div>
-                      <span className="text-[9px] sm:text-[10px] font-bold text-text-dim uppercase tracking-wider group-hover/tag:text-accent transition-colors">
+                      <span className="text-[9px] sm:text-[10px] font-bold text-text-dim uppercase tracking-wider group-hover/tag:text-accent-text transition-colors">
                         {tag.name}
                       </span>
                     </div>

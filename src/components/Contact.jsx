@@ -1,26 +1,34 @@
 import AnimatedSection from './AnimatedSection'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import toast from 'react-hot-toast'
 import { Mail, Phone, MessageCircle, Linkedin, Github } from 'lucide-react'
 
 export default function Contact() {
   const form = useRef()
+  const [submitting, setSubmitting] = useState(false)
 
   const sendEmail = async (e) => {
     e.preventDefault()
-    const data = new FormData(form.current)
-    data.append('access_key', import.meta.env.VITE_WEB3FORMS_KEY)
+    setSubmitting(true)
+    try {
+      const data = new FormData(form.current)
+      data.append('access_key', import.meta.env.VITE_WEB3FORMS_KEY)
 
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: data
-    })
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      })
 
-    if (res.ok) {
-      toast.success('Message sent!')
-      form.current.reset()
-    } else {
-      toast.error('Something went wrong. Try again.')
+      if (res.ok) {
+        toast.success('Message sent!')
+        form.current.reset()
+      } else {
+        toast.error('Something went wrong. Try again.')
+      }
+    } catch {
+      toast.error('Network error. Please try again.')
+    } finally {
+      setSubmitting(false)
     }
   }
 
@@ -32,7 +40,7 @@ export default function Contact() {
 
             <h2 className="text-3xl sm:text-5xl lg:text-7xl font-black text-light-bg mb-6 sm:mb-10 max-w-3xl leading-tight">
               Let's build something{' '}
-              <span className="text-accent underline decoration-white/10 underline-offset-8">exceptional</span>{' '}
+              <span className="text-accent-text underline decoration-white/10 underline-offset-8">exceptional</span>{' '}
               together.
             </h2>
 
@@ -57,9 +65,10 @@ export default function Contact() {
               />
               <button
                 type="submit"
-                className="w-full bg-accent hover:bg-accent-hover text-white font-black py-4 sm:py-5 rounded-xl transition-all transform hover:-translate-y-1 shadow-lg shadow-black/20 text-sm sm:text-base"
+                disabled={submitting}
+                className="w-full bg-accent hover:bg-accent-hover text-white font-black py-4 sm:py-5 rounded-xl transition-all transform hover:-translate-y-1 shadow-lg shadow-black/20 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
-                Send Message
+                {submitting ? 'Sending…' : 'Send Message'}
               </button>
             </form>
 
@@ -94,7 +103,7 @@ export default function Contact() {
                 href="https://github.com/nilanjanajui/my-portfolio"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-accent transition-colors"
+                className="hover:text-accent-text transition-colors"
               >
                 View Source
               </a>

@@ -69,7 +69,7 @@ export default function About() {
                       transition-all duration-300
                     ">
                       <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
-                      <span className="block text-2xl sm:text-3xl font-black text-accent mb-1">
+                      <span className="block text-2xl sm:text-3xl font-black text-accent-text mb-1">
                         {stat.value}
                       </span>
                       <span className="text-[10px] uppercase font-bold tracking-widest text-text-dim">
@@ -112,9 +112,9 @@ export default function About() {
                 {/* Terminal body */}
                 <div className="p-6 font-mono text-sm space-y-3">
                   <div>
-                    <span className="text-accent">const</span>
+                    <span className="text-accent-text">const</span>
                     <span className="text-light-bg"> developer </span>
-                    <span className="text-accent">=</span>
+                    <span className="text-accent-text">=</span>
                     <span className="text-light-bg"> {"{"}</span>
                   </div>
 
