@@ -40,15 +40,6 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(211, 218, 217, 0.06);
 }
 
-[data-theme="light"] {
-  --color-primary: #F5F5F0;
-  --color-secondary: #E8E8E2;
-  --color-accent: #715A5A;
-  --color-accent-hover: #5F4B4B;
-  --color-light-bg: #1A1A2E;
-  --color-text-dim: #4A4A5A;
-}
-
 body {
   font-family: 'Inter', sans-serif;
 }
