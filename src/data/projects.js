@@ -46,6 +46,7 @@ export const projects = [
         title: 'RescueLink',
         tag: 'Full Stack',
         description: 'A disaster relief coordination platform that connects volunteers with active relief missions — mission discovery, volunteer sign-ups, and role-based dashboards for users and admins.',
+        demoNote: 'Demo login available for user and admin roles',
         highlight: 'Better Auth with Google OAuth and demo login, JWT-secured Express API with role-based middleware, AI-powered mission recommendations (Groq + Adzuna), and a searchable/filterable mission explorer.',
         image: rescueLinkImg,
         link: 'https://rescuelink-client.vercel.app',

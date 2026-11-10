@@ -4,32 +4,32 @@ const milestones = [
     {
         year: "2023",
         title: "CSE Begins - Fundamentals & First Code",
-        desc: "Enrolled in B.Sc. CSE at the University of Chittagong with a HSC GPA of 5.00/5.00. Semester one was raw fundamentals - C++ syntax, logic building, and understanding how a computer actually executes instructions. Wrote my first algorithms, struggled with pointers, and realized this was going to be harder and far more interesting than I expected. On the side, I was already sketching app ideas on paper - the builder instinct showed up before I had the skills to match it.",
+        desc: "Enrolled in B.Sc. CSE at University of Chittagong with HSC GPA 5.00/5.00. Mastered C++ fundamentals, wrote initial algorithms, and began sketching application ideas on paper.",
     },
     {
         year: "2023 - 2024",
         title: "Going Deep - DSA, OOP & Database Theory",
-        desc: "University pushed me into the core of CS - Data Structures & Algorithms in C++, Object-Oriented Programming with classes, inheritance, and polymorphism, and database systems from the ground up. Learned Oracle SQL and MySQL hands-on - writing multi-table joins, stored procedures, designing normalized schemas, and applying functional dependency theory to reach 3NF. Alongside coursework, I was building academic projects - an Arduino-based alcohol detection and vehicle control system with GPS and GSM modules, combining hardware and software in the same project. The academic work wasn't just theory. I was using it.",
+        desc: "Studied DSA in C++, OOP, and relational databases with Oracle SQL and MySQL to 3NF. Built an Arduino alcohol detection vehicle control system with GPS and GSM modules.",
     },
     {
         year: "2024 - Early 2025",
         title: "Design Obsession - UI/UX & Visual Thinking",
-        desc: "While continuing my CS coursework, I discovered I had a strong pull toward design. Photography had already trained me to see - light, framing, negative space, hierarchy. I started applying that same eye to interfaces. Learned Figma, studied design systems, analyzed how great UIs guide attention and reduce friction. Started the UI/UX journey formally - building mockups, studying user flows, and developing an aesthetic language. This wasn't a break from CS - it ran alongside it. The combination of algorithmic thinking and visual sensibility started feeling like a real advantage.",
+        desc: "Photography trained my eye for visual hierarchy. Learned Figma, studied design systems, built mockups, and analyzed user flows, uniting algorithmic thinking with visual sensibility alongside CS coursework.",
     },
     {
         year: "Late 2025",
         title: "Design Led Me to Code - Frontend Begins",
-        desc: "Designing interfaces I couldn't build myself became frustrating fast. I wanted to take a Figma file and turn it into something real - responsive, interactive, pixel-perfect, and actually deployed. That gap pushed me into frontend development. Picked up React and Tailwind CSS while still in university, and they clicked quickly because I already knew what I was building and why it should look and behave a certain way. Within weeks I was building real components, not just following tutorials. The design background meant I skipped the phase where most developers make things that work but look terrible.",
+        desc: "Turned Figma designs into responsive, deployed interfaces. Learned React and Tailwind CSS in university, moving quickly from tutorials to building polished, interactive components with strong visual design.",
     },
     {
         year: "Late 2025 - Now",
         title: "Full-Stack - Shipping Real Systems",
-        desc: "Frontend wasn't enough. I wanted to own the entire stack - from database schema to deployed UI. So while attending university lectures on algorithms and software engineering, I was also building full-stack applications outside class. Shipped DriveFleet, a complete MERN car rental platform with BetterAuth and cross-domain HTTPOnly cookie authentication. Built Database Design Studio, a Flask + React ETL app that computes candidate keys and normalizes to 3NF - directly applying what I learned in database theory class to a real tool. Deployed applications across Vercel, Render, and Netlify. Fixed production bugs that no course prepares you for - CORS failures, Tailwind v4 cascade conflicts, Mongoose collection mismatches. Academic and development, running in parallel, feeding each other.",
+        desc: "Shipped DriveFleet with BetterAuth cookie authentication and Database Design Studio for 3NF normalization. Deployed full-stack applications across Vercel, Render, and Netlify while balancing university coursework.",
     },
     {
         year: "2026",
         title: "Into AI & What's Next",
-        desc: "Still in university, still shipping. Integrating LLMs and voice synthesis into real applications - Jarvis, an AI voice assistant built with Groq LLaMA and ElevenLabs TTS, and DevMatch, a developer collaboration platform with advanced auth and real-time feeds. The academic foundation in algorithms and systems makes the AI integration make sense at a level beyond just calling an API. The journey is not close to done."
+        desc: "Integrating LLMs and voice synthesis into applications: Jarvis voice assistant with Groq LLaMA and ElevenLabs TTS, and DevMatch collaboration platform, backed by strong algorithmic foundations."
     },
 ]
 

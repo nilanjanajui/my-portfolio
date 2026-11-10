@@ -93,14 +93,22 @@ export default function ProjectsGrid({ limit, showViewMore, title = 'Other Work'
                   <h3 className="text-xl sm:text-2xl font-black mb-2 sm:mb-3 text-light-bg">{project.title}</h3>
                   <p className="text-text-dim font-medium text-sm mb-4 sm:mb-6 line-clamp-2">{project.description}</p>
 
-                  {/* Tech stack chips on hover */}
-                  <div className="flex flex-wrap gap-1.5 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-h-0 group-hover:max-h-20 overflow-hidden">
+                  {/* Tech stack chips */}
+                  <div className="flex flex-wrap gap-1.5 mb-4">
                     {project.techStack?.slice(0, 4).map(tech => (
                       <span key={tech} className="text-[10px] font-bold bg-accent/20 backdrop-blur-sm text-accent px-2 py-0.5 rounded-full border border-accent/20">
                         {tech}
                       </span>
                     ))}
                   </div>
+
+                  {project.demoNote && (
+                    <div className="mb-4">
+                      <span className="inline-block text-[11px] font-medium bg-white/5 border border-white/10 text-text-dim px-2.5 py-1 rounded-md">
+                        {project.demoNote}
+                      </span>
+                    </div>
+                  )}
 
                   <div className="mt-auto flex items-center justify-between pt-4 sm:pt-6 border-t border-white/8 gap-3">
                     <button
