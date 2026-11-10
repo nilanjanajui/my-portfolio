@@ -91,8 +91,21 @@ export default function Hero() {
 
             {/* Tagline */}
             <p className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-light-bg flex flex-col sm:gap-2">
-              MERN & Next.js developer building full-stack apps with auth, payments, and AI features.
+              <span>I build</span>
+              <TypeAnimation
+                sequence={[
+                  'clean UI.', 2000,
+                  'React apps.', 2000,
+                  'full-stack systems.', 2000,
+                  'real solutions.', 2000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+                className="text-accent-text"
+              />
             </p>
+
 
             <div className="w-full max-w-xl mx-auto lg:mx-0 bg-primary/80 backdrop-blur-xl rounded-xl overflow-hidden border border-white/10 shadow-2xl mt-2 mb-4">
               {/* Terminal Header */}
