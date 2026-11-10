@@ -106,6 +106,7 @@ export default function Hero() {
               />
             </p>
 
+
             <div className="w-full max-w-xl mx-auto lg:mx-0 bg-primary/80 backdrop-blur-xl rounded-xl overflow-hidden border border-white/10 shadow-2xl mt-2 mb-4">
               {/* Terminal Header */}
               <div className="flex items-center px-4 py-2 bg-white/5 border-b border-white/10">
