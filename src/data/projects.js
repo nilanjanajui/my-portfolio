@@ -9,7 +9,7 @@ import urbanNestImg from '../assets/urbannest.webp'
 import rescueLinkImg from '../assets/rescuelink.webp'
 import databaseDesignStudioImg from '../assets/database-design-studio.webp'
 import careerOSImg from '../assets/careeros.webp'
-import jarvisImg from '../assets/jarvis.webp'
+import jarvisImg from '../assets/jarvis.png'
 
 export const projects = [
 
