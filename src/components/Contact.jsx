@@ -1,7 +1,7 @@
 import AnimatedSection from './AnimatedSection'
 import { useRef } from 'react'
 import toast from 'react-hot-toast'
-import { Mail, Phone, MessageCircle, Linkedin, Github, Facebook, Twitter } from 'lucide-react'
+import { Mail, Phone, MessageCircle, Linkedin, Github } from 'lucide-react'
 
 export default function Contact() {
   const form = useRef()
@@ -70,8 +70,6 @@ export default function Contact() {
                 { icon: <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />, label: 'WhatsApp', href: 'https://wa.me/8801794437893' },
                 { icon: <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/nilanjana-jui-759402286/' },
                 { icon: <Github className="w-5 h-5 sm:w-6 sm:h-6" />, label: 'GitHub', href: 'https://github.com/nilanjanajui' },
-                { icon: <Facebook className="w-5 h-5 sm:w-6 sm:h-6" />, label: 'Facebook', href: 'https://facebook.com/yourprofile' },
-                { icon: <Twitter className="w-5 h-5 sm:w-6 sm:h-6" />, label: 'Twitter', href: 'https://twitter.com/yourprofile' },
               ].map((link, index) => (
                 <AnimatedSection key={link.label} direction="up" delay={index * 150}>
                   <a

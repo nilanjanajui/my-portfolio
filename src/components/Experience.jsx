@@ -5,7 +5,7 @@ const experiences = [
     period: "2023 - Present",
     role: "Independent Full-Stack Developer",
     description:
-      "Self-directed developer with 7 deployed applications spanning React, Next.js, Flask, and MongoDB. Focused on building production-ready systems with real auth, real databases, and real deployment challenges - not just tutorials.",
+      "Self-directed developer with multiple deployed applications spanning React, Next.js, Flask, and MongoDB. Focused on building production-ready systems with real auth, real databases, and real deployment challenges - not just tutorials.",
     highlights: [
       "Built DriveFleet - MERN car rental platform with BetterAuth & cross-domain cookies",
       "Built Database Design Studio - Flask + React ETL app with 3NF normalization engine",

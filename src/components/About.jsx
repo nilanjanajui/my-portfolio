@@ -1,7 +1,10 @@
 import AnimatedSection from "./AnimatedSection";
+import { projects } from "../data/projects";
+
+const deployedCount = projects.filter((p) => p.link).length;
 
 const stats = [
-  { value: "7", label: "Deployed Apps" },
+  { value: String(deployedCount), label: "Deployed Apps" },
   { value: "40+", label: "Repositories" },
   { value: "500+", label: "Commits" },
 ];
@@ -38,12 +41,11 @@ export default function About() {
               <p className="text-base sm:text-lg leading-relaxed text-text-dim font-medium mb-6 sm:mb-8">
                 I built a{" "}
                 <span className="text-light-bg font-bold">
-                  Flask-based ETL web app
+                  Flask + React database design tool
                 </span>{" "}
-                that automates database workflows — handling CSV, Excel, JSON and
-                XML, cleaning data, detecting functional dependencies, computing
-                candidate keys, and normalizing to 3NF with a drag-and-drop
-                React interface.
+                handling CSV and Excel uploads, cleaning data, detecting
+                functional dependencies, computing candidate keys, and
+                normalizing to 3NF with a drag-and-drop React interface.
               </p>
 
               <p className="text-base sm:text-lg leading-relaxed text-text-dim font-medium mb-8 sm:mb-12">
@@ -150,7 +152,7 @@ export default function About() {
                     <div>
                       <span className="text-text-dim">deployed</span>
                       <span className="text-light-bg">: </span>
-                      <span className="text-blue-400">7</span>
+                      <span className="text-blue-400">{deployedCount}</span>
                       <span className="text-text-dim"> // apps in production</span>
                     </div>
                     <div>

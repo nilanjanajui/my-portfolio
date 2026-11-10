@@ -13,7 +13,7 @@
 
 ## ✨ About
 
-This repository holds the source code for my personal **developer portfolio** — a fast, responsive single-page site built to showcase my projects, technical skills, and development journey as a Computer Science & Engineering student and frontend/JavaScript developer.
+This repository holds the source code for my personal **developer portfolio** — a fast, responsive single-page site built to showcase my projects, technical skills, and development journey as a Computer Science & Engineering student and MERN stack developer.
 
 It's the place recruiters, collaborators, and fellow developers can go to see what I've built, what I work with, and how to reach me.
 
