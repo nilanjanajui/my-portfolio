@@ -7,7 +7,7 @@ import wizardImg from '../assets/wizard.webp'
 import driveFleetImg from '../assets/drivefleet.webp'
 import urbanNestImg from '../assets/urbannest.webp'
 import rescueLinkImg from '../assets/rescuelink.webp'
-import databaseDesignStudioImg from '../assets/database-design-studio.png'
+import databaseDesignStudioImg from '../assets/database-design-studio.webp'
 import careerOSImg from '../assets/careeros.webp'
 
 export const projects = [
@@ -46,6 +46,7 @@ export const projects = [
         title: 'RescueLink',
         tag: 'Full Stack',
         description: 'A disaster relief coordination platform that connects volunteers with active relief missions — mission discovery, volunteer sign-ups, and role-based dashboards for users and admins.',
+        demoNote: 'Demo login available for user and admin roles',
         highlight: 'Better Auth with Google OAuth and demo login, JWT-secured Express API with role-based middleware, AI-powered mission recommendations (Groq + Adzuna), and a searchable/filterable mission explorer.',
         image: rescueLinkImg,
         link: 'https://rescuelink-client.vercel.app',

@@ -51,7 +51,7 @@ export default function ProjectDetail() {
 
                 {/* Header */}
                 <div className="mb-10">
-                    <span className="text-accent font-bold uppercase tracking-widest text-xs sm:text-sm mb-3 block">
+                    <span className="text-accent-text font-bold uppercase tracking-widest text-xs sm:text-sm mb-3 block">
                         {project.tag}
                     </span>
                     <h1 className="text-4xl sm:text-5xl font-black text-light-bg mb-6">

@@ -11,7 +11,6 @@ import HowIBuild from "./components/HowIBuild"
 import Contact from "./components/Contact"
 import ProjectDetail from "./components/ProjectDetail"
 import AllProjects from "./components/AllProjects"
-import CustomCursor from "./components/CustomCursor"
 import InteractiveBackground from "./components/InteractiveBackground"
 import ScrollToTop from "./components/ScrollToTop"
 import { Toaster } from 'react-hot-toast'
@@ -19,7 +18,6 @@ import { Toaster } from 'react-hot-toast'
 export default function App() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-primary text-light-bg selection:bg-accent selection:text-white">
-      <CustomCursor />
       <InteractiveBackground />
       <Toaster
         position="bottom-right"

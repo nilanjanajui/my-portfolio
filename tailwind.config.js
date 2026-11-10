@@ -9,6 +9,7 @@ export default {
         secondary: "#44444E",
         accent: "#715A5A",
         "accent-hover": "#5F4B4B",
+        "accent-text": "#CDA9A9",
         "light-bg": "#D3DAD9",
         "text-dim": "#A0A8A7",
       },

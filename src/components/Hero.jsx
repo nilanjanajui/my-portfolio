@@ -1,7 +1,7 @@
 import profileImg from '../assets/profile.webp'
 import AnimatedSection from './AnimatedSection'
 import { TypeAnimation } from 'react-type-animation'
-import resumePDF from '../assets/resume.pdf'
+const resumePDF = '/Nilanjana_Das_Jui_Resume.pdf'
 
 export default function Hero() {
   return (
@@ -59,7 +59,7 @@ export default function Hero() {
               <div className="text-center lg:text-left mt-6">
                 <span className="text-lg sm:text-xl font-bold text-light-bg">Hi, I'm</span>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-light-bg">
-                  <span className="text-accent">Nilanjana</span> Das <span className="text-accent">Jui</span>
+                  <span className="text-accent-text">Nilanjana</span> Das <span className="text-accent-text">Jui</span>
                 </h1>
               </div>
             </AnimatedSection>
@@ -89,22 +89,10 @@ export default function Hero() {
               MERN Stack Developer · CSE Student
             </div>
 
-            {/* H1 — tagline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-light-bg flex flex-col sm:gap-2">
-              <span>I build</span>
-              <TypeAnimation
-                sequence={[
-                  'clean UI.', 2000,
-                  'React apps.', 2000,
-                  'full-stack systems.', 2000,
-                  'real solutions.', 2000,
-                ]}
-                wrapper="span"
-                speed={50}
-                repeat={Infinity}
-                className="text-accent"
-              />
-            </h1>
+            {/* Tagline */}
+            <p className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-light-bg flex flex-col sm:gap-2">
+              MERN & Next.js developer building full-stack apps with auth, payments, and AI features.
+            </p>
 
             <div className="w-full max-w-xl mx-auto lg:mx-0 bg-primary/80 backdrop-blur-xl rounded-xl overflow-hidden border border-white/10 shadow-2xl mt-2 mb-4">
               {/* Terminal Header */}
@@ -145,91 +133,67 @@ export default function Hero() {
                 View Projects
               </a>
 
-              {/* GitHub — glass button */}
+              {/* Resume — secondary text button */}
+              <a
+                href={resumePDF}
+                target="_blank"
+                rel="noreferrer"
+                className="
+                  px-7 sm:px-10 py-4 sm:py-5 rounded-xl
+                  bg-white/5 backdrop-blur-md
+                  border border-white/12
+                  text-light-bg font-bold
+                  flex items-center gap-2
+                  shadow-lg shadow-black/20
+                  hover:bg-white/10 hover:border-white/20
+                  transform hover:-translate-y-1
+                  transition-all duration-300
+                  text-sm sm:text-base
+                "
+              >
+                Resume
+              </a>
+
+              {/* GitHub — icon-only */}
               <a
                 href="https://github.com/nilanjanajui"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="GitHub"
                 className="
-                  px-7 sm:px-10 py-4 sm:py-5 rounded-xl
+                  p-4 sm:p-5 rounded-xl
                   bg-white/5 backdrop-blur-md
                   border border-white/12
                   text-light-bg font-bold
-                  flex items-center gap-2
+                  flex items-center justify-center
                   shadow-lg shadow-black/20
                   hover:bg-white/10 hover:border-white/20
                   transform hover:-translate-y-1
                   transition-all duration-300
-                  text-sm sm:text-base
                 "
               >
                 <span className="material-symbols-outlined text-base sm:text-lg">code</span>
-                GitHub
               </a>
 
-              {/* LinkedIn — glass button */}
+              {/* LinkedIn — icon-only */}
               <a
                 href="https://www.linkedin.com/in/nilanjana-jui-759402286"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="LinkedIn"
                 className="
-                  px-7 sm:px-10 py-4 sm:py-5 rounded-xl
+                  p-4 sm:p-5 rounded-xl
                   bg-white/5 backdrop-blur-md
                   border border-white/12
                   text-light-bg font-bold
-                  flex items-center gap-2
+                  flex items-center justify-center
                   shadow-lg shadow-black/20
-                hover:bg-white/10 hover:border-white/20
+                  hover:bg-white/10 hover:border-white/20
                   transform hover:-translate-y-1
                   transition-all duration-300
-                  text-sm sm:text-base
                 "
               >
                 <span className="material-symbols-outlined text-base sm:text-lg">person</span>
-                LinkedIn
-              </a>
-
-              {/* View Resume — glass button */}
-              <a
-                href={resumePDF}
-                target="_blank"
-                rel="noreferrer"
-                className="
-                  px-7 sm:px-10 py-4 sm:py-5 rounded-xl
-                  bg-white/5 backdrop-blur-md
-                  border border-white/12
-                  text-light-bg font-bold
-                  flex items-center gap-2
-                  shadow-lg shadow-black/20
-                  hover:bg-white/10 hover:border-white/20
-                  transform hover:-translate-y-1
-                  transition-all duration-300
-                  text-sm sm:text-base
-                "
-              >
-                <span className="material-symbols-outlined text-base sm:text-lg">visibility</span>
-                View Resume
-              </a>
-
-              {/* Download Resume — glass button */}
-              <a
-                href={resumePDF}
-                download
-                className="
-                  px-7 sm:px-10 py-4 sm:py-5 rounded-xl
-                  bg-white/5 backdrop-blur-md
-                  border border-white/12
-                  text-light-bg font-bold
-                  flex items-center gap-2
-                  shadow-lg shadow-black/20
-                  hover:bg-white/10 hover:border-white/20
-                  transform hover:-translate-y-1
-                  transition-all duration-300
-                  text-sm sm:text-base
-                "
-              >
-                <span className="material-symbols-outlined text-base sm:text-lg">download</span>
-                Download Resume
               </a>
             </div>
 

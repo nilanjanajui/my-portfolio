@@ -7,6 +7,7 @@ const skills = [
     tags: [
       { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
       { name: 'Next.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+      { name: 'TypeScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
       { name: 'Tailwind', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
       { name: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
       { name: 'HTML', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
@@ -70,7 +71,6 @@ const skills = [
       { name: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
       { name: 'GitHub', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
       { name: 'VS Code', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
-      { name: 'Docker', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
     ],
   },
 ]
@@ -143,7 +143,7 @@ export default function Skills() {
                           style={darkLogos.includes(tag.name) ? { filter: 'invert(1) brightness(0.8)' } : {}}
                         />
                       </div>
-                      <span className="text-[9px] sm:text-[10px] font-bold text-text-dim uppercase tracking-wider group-hover/tag:text-accent transition-colors">
+                      <span className="text-[9px] sm:text-[10px] font-bold text-text-dim uppercase tracking-wider group-hover/tag:text-accent-text transition-colors">
                         {tag.name}
                       </span>
                     </div>

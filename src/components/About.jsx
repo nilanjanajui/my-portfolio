@@ -1,7 +1,10 @@
 import AnimatedSection from "./AnimatedSection";
+import { projects } from "../data/projects";
+
+const deployedCount = projects.filter((p) => p.link).length;
 
 const stats = [
-  { value: "7", label: "Deployed Apps" },
+  { value: String(deployedCount), label: "Deployed Apps" },
   { value: "40+", label: "Repositories" },
   { value: "500+", label: "Commits" },
 ];
@@ -38,12 +41,11 @@ export default function About() {
               <p className="text-base sm:text-lg leading-relaxed text-text-dim font-medium mb-6 sm:mb-8">
                 I built a{" "}
                 <span className="text-light-bg font-bold">
-                  Flask-based ETL web app
+                  Flask + React database design tool
                 </span>{" "}
-                that automates database workflows — handling CSV, Excel, JSON and
-                XML, cleaning data, detecting functional dependencies, computing
-                candidate keys, and normalizing to 3NF with a drag-and-drop
-                React interface.
+                handling CSV and Excel uploads, cleaning data, detecting
+                functional dependencies, computing candidate keys, and
+                normalizing to 3NF with a drag-and-drop React interface.
               </p>
 
               <p className="text-base sm:text-lg leading-relaxed text-text-dim font-medium mb-8 sm:mb-12">
@@ -67,7 +69,7 @@ export default function About() {
                       transition-all duration-300
                     ">
                       <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent" />
-                      <span className="block text-2xl sm:text-3xl font-black text-accent mb-1">
+                      <span className="block text-2xl sm:text-3xl font-black text-accent-text mb-1">
                         {stat.value}
                       </span>
                       <span className="text-[10px] uppercase font-bold tracking-widest text-text-dim">
@@ -110,9 +112,9 @@ export default function About() {
                 {/* Terminal body */}
                 <div className="p-6 font-mono text-sm space-y-3">
                   <div>
-                    <span className="text-accent">const</span>
+                    <span className="text-accent-text">const</span>
                     <span className="text-light-bg"> developer </span>
-                    <span className="text-accent">=</span>
+                    <span className="text-accent-text">=</span>
                     <span className="text-light-bg"> {"{"}</span>
                   </div>
 
@@ -150,7 +152,7 @@ export default function About() {
                     <div>
                       <span className="text-text-dim">deployed</span>
                       <span className="text-light-bg">: </span>
-                      <span className="text-blue-400">7</span>
+                      <span className="text-blue-400">{deployedCount}</span>
                       <span className="text-text-dim"> // apps in production</span>
                     </div>
                     <div>
