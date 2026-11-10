@@ -68,6 +68,11 @@ my-portfolio/
 
 ---
 
+## Architecture Diagram
+[![Architecture diagram of nilanjanajui/my-portfolio](https://gitdiagram.com/nilanjanajui/my-portfolio/diagram.png)](https://gitdiagram.com/nilanjanajui/my-portfolio?utm_source=readme&utm_medium=picture)
+
+---
+
 ## 🛠️ Getting Started
 
 Clone the repo and run it locally:
