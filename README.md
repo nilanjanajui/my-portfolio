@@ -73,9 +73,6 @@ my-portfolio/
 
 ---
 
-[![Architecture diagram](https://gitdiagram.com/diagram-badge.svg)](https://gitdiagram.com/nilanjanajui/my-portfolio?utm_source=readme&utm_medium=badge)
-
----
 
 ## 🛠️ Getting Started
 
