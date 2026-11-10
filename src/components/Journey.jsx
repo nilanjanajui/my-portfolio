@@ -29,7 +29,7 @@ const milestones = [
     {
         year: "2026",
         title: "Into AI & What's Next",
-        desc: "Integrating LLMs and voice synthesis into applications: Jarvis voice assistant with Groq LLaMA and ElevenLabs TTS, and DevMatch collaboration platform, backed by strong algorithmic foundations."
+        desc: "Integrating LLMs and voice synthesis into applications with Jarvis, combining Groq-hosted GPT-OSS and ElevenLabs TTS with strong algorithmic foundations."
     },
 ]
 
@@ -42,15 +42,6 @@ const building = [
         status: "In Development",
         icon: "mic",
         github: "https://github.com/nilanjanajui/jarvis",
-    },
-    {
-        name: "DevMatch",
-        tagline: "Developer Collaboration Platform",
-        desc: "A platform for developers to find collaborators, post project ideas, and build together. Full authentication, paginated feeds, and real-time updates.",
-        stack: ["Next.js", "Express", "MongoDB", "Better Auth", "React Query", "Tailwind v4"],
-        status: "In Development",
-        icon: "group",
-        github: "https://github.com/nilanjanajui/devmatch-client",
     },
 ]
 
